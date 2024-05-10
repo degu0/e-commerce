@@ -6,7 +6,7 @@ const Layout: React.FC<LayoutRouteProps> = ({children}) => {
     return(
         <div className="m-0 p-0">
             <Header />
-            <div className="h-screen w-max overscroll-x-none">
+            <div className="h-full w-full">
                 <div>
                     {children}
                 </div>
