@@ -12,7 +12,7 @@ const About: React.FC = () => {
                 </p>
             </div>
             <div className="h-[80vh] w-full flex flex-wrap">
-                <div className="w-1/2 flex flex-col justify-center">
+                <div className="w-1/2 grid justify-center content-center">
                     <h1 className="text-black text-6xl font-bold text-left mb-10">Our Story</h1>
                     <p className="text-black font-medium text-lg w-[625px]">
                         Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an

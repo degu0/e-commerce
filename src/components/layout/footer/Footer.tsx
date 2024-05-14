@@ -1,6 +1,6 @@
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-black w-full h-full border-2 border-white  text-white">
+        <div className="bg-black w-full h-full border-2 border-white  text-white">
             <div className="flex items-center justify-around p-10">
                 <div>
                     <ul>
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
             <div className="border-2 border-slate-900 text-center p-2">
                 <p className="text-slate-800">TASLJDFHASJDFSDJF</p>
             </div>
-        </footer>
+        </div>
     );
 }
 
