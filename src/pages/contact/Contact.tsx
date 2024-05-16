@@ -1,11 +1,11 @@
 import { FiPhone } from "react-icons/fi";
 import { SlEnvolope } from "react-icons/sl";
-import Button from "../../forms/button/Button";
-import Input from "../../forms/input/Input";
+import Button from "../../components/forms/button/Button";
+import Input from "../../components/forms/input/Input";
 
 const Contact: React.FC = () => {
     return (
-        <div className="h-screen">
+        <div className="h-screen font-custom">
             <div className="h-[15vh] flex items-center ml-24">
                 <p className="text-gray-500">
                     Home / <label className="text-black">About</label>

@@ -1,6 +1,6 @@
 const Header: React.FC = () => {
     return (
-        <header className="flex flex-wrap items-center justify-around w-full h-1/6 pt-8 pb-4 border-b-2 ">
+        <header className="flex flex-wrap items-center justify-around w-full h-1/6 pt-8 pb-4 border-b-2 font-custom">
             <div>
                 <a href="/" className="text-2xl font-bold">E-Commerce</a>
             </div>

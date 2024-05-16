@@ -5,7 +5,7 @@ import { IoBagOutline } from "react-icons/io5";
 
 const About: React.FC = () => {
     return (
-        <div className="h-[315vh]">
+        <div className="h-[315vh] font-custom">
             <div className="h-[15vh] flex items-center ml-16">
                 <p className="text-gray-500">
                     Home / <label className="text-black">About</label>

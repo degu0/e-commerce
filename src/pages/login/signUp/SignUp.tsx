@@ -1,8 +1,10 @@
+import Image from '../../../image/Image_login.png';
+
 const SignUp: React.FC = () => {
     return (
-        <div className="w-full h-screen flex">
+    <div className="w-full h-screen flex font-custom">
             <div className="w-[60%] bg-blue-login">
-                {/* <img src="./image/dl_beatsnoop_1.png" alt="" /> */}
+                <img src={Image} alt="" />
             </div>
             <div className="w-[40%]">
                 <form action="" className="h-full w-full flex flex-col items-center justify-center">

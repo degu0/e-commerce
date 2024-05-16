@@ -1,6 +1,6 @@
 const Footer: React.FC = () => {
     return (
-        <div className="bg-black w-full h-full border-2 border-white  text-white">
+        <div className="bg-black w-full h-full border-2 border-white  text-white font-custom">
             <div className="flex items-center justify-around p-10">
                 <div>
                     <ul>
