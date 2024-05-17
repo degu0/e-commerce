@@ -3,10 +3,15 @@ import { BiStoreAlt } from "react-icons/bi";
 import { TbCoin, TbMoneybag, TbTruckDelivery, TbHeadset } from "react-icons/tb";
 import { IoBagOutline } from "react-icons/io5";
 
+import Image from "../../image/About/about_1.png"
+import Tom from "../../image/About/image_1.png";
+import Emma from "../../image/About/image_2.png";
+import Will from "../../image/About/image_3.png";
+
 const About: React.FC = () => {
     return (
         <div className="h-[315vh] font-custom">
-            <div className="h-[15vh] flex items-center ml-16">
+            <div className="h-[15vh] flex items-center ml-24">
                 <p className="text-gray-500">
                     Home / <label className="text-black">About</label>
                 </p>
@@ -26,15 +31,16 @@ const About: React.FC = () => {
                         diverse assotment in categories ranging  from consumer.
                     </p>
                 </div>
-                <div className="w-1/2 bg-pink-500">
-
+                <div className="w-1/2 bg-pink-500 flex justify-center items-end">
+                    <img src={Image} alt="" className="h-full" />
                 </div>
             </div>
             <div className="h-[70vh] flex items-center justify-around">
-                <div className="border-2 border-gray-500 rounded w-[270px] h-[230px] flex flex-col items-center justify-center">
-                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center mb-2">
-                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center">
-                            <BiStoreAlt className="text-white text-4xl" />
+                <div className="group border-2 border-gray-500 rounded w-[270px] h-[230px] flex flex-col items-center justify-center
+                hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
+                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center mb-2 group-hover:bg-opacity-50group ">
+                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-white transition-colors duration-500 ">
+                            <BiStoreAlt className="text-white text-4xl group-hover:text-black" />
                         </div>
                     </div>
                     <h1 className="font-bold text-center text-4xl mb-2">10.5k</h1>
@@ -42,10 +48,11 @@ const About: React.FC = () => {
                         Sallers active our site
                     </p>
                 </div>
-                <div className="border-2 border-gray-500 rounded w-[270px] h-[230px] flex flex-col items-center justify-center">
-                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center mb-2">
-                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center">
-                            <IoBagOutline className="text-white text-4xl" />
+                <div className="group border-2 border-gray-500 rounded w-[270px] h-[230px] flex flex-col items-center justify-center
+                hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
+                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center mb-2 group-hover:bg-opacity-50group ">
+                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-white transition-colors duration-500 ">
+                            <IoBagOutline className="text-white text-4xl group-hover:text-black" />
                         </div>
                     </div>
                     <h1 className="font-bold text-center text-4xl mb-2">33k</h1>
@@ -53,10 +60,11 @@ const About: React.FC = () => {
                         Mopnthly Produduct Sale
                     </p>
                 </div>
-                <div className="border-2 border-gray-500 rounded w-[270px] h-[230px] flex flex-col items-center justify-center">
-                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center mb-2">
-                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center">
-                            <TbCoin className="text-white text-4xl" />
+                <div className="group border-2 border-gray-500 rounded w-[270px] h-[230px] flex flex-col items-center justify-center
+                hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
+                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center mb-2 group-hover:bg-opacity-50group ">
+                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-white transition-colors duration-500 ">
+                            <TbCoin className="text-white text-4xl group-hover:text-black" />
                         </div>
                     </div>
                     <h1 className="font-bold text-center text-4xl mb-2">45.5k</h1>
@@ -64,10 +72,11 @@ const About: React.FC = () => {
                         Customer active in our site
                     </p>
                 </div>
-                <div className="border-2 border-gray-500 rounded w-[270px] h-[230px] flex flex-col items-center justify-center">
-                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center mb-2">
-                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center">
-                            <TbMoneybag className="text-white text-4xl" />
+                <div className="group border-2 border-gray-500 rounded w-[270px] h-[230px] flex flex-col items-center justify-center
+                hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
+                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center mb-2 group-hover:bg-opacity-50group ">
+                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-white transition-colors duration-500 ">
+                            <TbMoneybag className="text-white text-4xl group-hover:text-black" />
                         </div>
                     </div>
                     <h1 className="font-bold text-center text-4xl mb-2">25k</h1>
@@ -78,9 +87,11 @@ const About: React.FC = () => {
             </div>
             <div className="h-[80vh] flex items-center justify-around w- full ">
                 <div className="flex flex-col justify-center w-[370px] h-full">
-                    <div className="bg-gray-500 w-full h-full"></div>
-                    <div>
-                        <h1 className="text-bold text-5xl">Tom Cruise</h1>
+                    <div className="bg-secondary flex justify-center items-end w-full h-[80%] rounded">
+                        <img src={Tom} alt="" />
+                    </div>
+                    <div className="mt-4">
+                        <h1 className="text-bold text-4xl">Tom Cruise</h1>
                         <h3 className="text-lg">Founder & Chairman</h3>
                         <div className="flex text-lg gap-2 mt-4">
                             <RiInstagramLine />
@@ -90,9 +101,11 @@ const About: React.FC = () => {
                     </div>
                 </div>
                 <div className="flex flex-col justify-center w-[370px] h-full">
-                    <div className="bg-gray-500 w-full h-full"></div>
-                    <div>
-                        <h1 className="text-bold text-5xl">Emma Watson</h1>
+                    <div className="bg-secondary flex justify-center items-end w-full h-[80%] rounded">
+                        <img src={Emma} alt="" />
+                    </div>
+                    <div className="mt-4">
+                        <h1 className="text-bold text-4xl">Emma Watson</h1>
                         <h3 className="text-lg">Managing Director</h3>
                         <div className="flex text-lg gap-2 mt-4">
                             <RiInstagramLine />
@@ -102,9 +115,11 @@ const About: React.FC = () => {
                     </div>
                 </div>
                 <div className="flex flex-col justify-center w-[370px] h-full">
-                    <div className="bg-gray-500 w-full h-full"></div>
-                    <div>
-                        <h1 className="text-bold text-5xl">Will Smith</h1>
+                    <div className="bg-secondary flex justify-center items-end w-full h-[80%] rounded">
+                        <img src={Will} alt="" />
+                    </div>
+                    <div className="mt-4">
+                        <h1 className="text-bold text-4xl">Will Smith</h1>
                         <h3 className="text-lg">Product Designer</h3>
                         <div className="flex gap-2 mt-4">
                             <RiInstagramLine />

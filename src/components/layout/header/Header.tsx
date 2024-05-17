@@ -1,22 +1,34 @@
 const Header: React.FC = () => {
     return (
-        <header className="flex flex-wrap items-center justify-around w-full h-1/6 pt-8 pb-4 border-b-2 font-custom">
+        <header className="flex flex-wrap items-center justify-around w-full h-1/6 pt-8 pb-4 border-b-2 border-gray-line font-custom">
             <div>
                 <a href="/" className="text-2xl font-bold">E-Commerce</a>
             </div>
             <div>
-                <ul className="flex list-none flex-row items-center gap-5 font-normal text-xl">
+                <ul className="flex list-none flex-row items-center gap-8 font-normal text-xl">
                     <li>
-                        <a href="/">Home</a>
+                        <a href="/" className="relative inline-block text-lg group">
+                            Home
+                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                        </a>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a href="/contact" className="relative inline-block text-lg group">
+                            Contact
+                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                        </a>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/about" className="relative inline-block text-lg group">
+                            About
+                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                        </a>
                     </li>
                     <li>
-                        <a href="/signUp">Sign Up</a>
+                        <a href="/signUp" className="relative inline-block text-lg group">
+                            SignUp
+                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                        </a>
                     </li>
                 </ul>
             </div>

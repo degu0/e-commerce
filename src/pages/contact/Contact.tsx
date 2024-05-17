@@ -8,12 +8,12 @@ const Contact: React.FC = () => {
         <div className="h-screen font-custom">
             <div className="h-[15vh] flex items-center ml-24">
                 <p className="text-gray-500">
-                    Home / <label className="text-black">About</label>
+                    Home / <label className="text-black">Contact</label>
                 </p>
             </div>
             <div className="flex justify-evenly items-center h-[80%] w-full">
                 <div className="w-[340px] h-[470px] border-none rounded shadow-lg">
-                    <div className="mx-10 my-8">
+                    <div className="mx-8 my-8">
                         <div className="flex items-center gap-3">
                             <div className="bg-red-custom rounded-full w-10 h-10 flex justify-center items-center">
                                 <FiPhone className="text-white text-2xl" />
@@ -23,12 +23,11 @@ const Contact: React.FC = () => {
                             </h3>
                         </div>
                         <br />
-                        <p>We are available 24/7, 7 days a week</p>
-                        <br />
+                        <p className="mb-2">We are available 24/7, 7 days a week</p>
                         <p>Phone: +8801611112222</p>
                     </div>
                     <hr className="w-[80%] mx-auto" />
-                    <div className="m-10 h-1/2">
+                    <div className="m-8 h-1/2">
                         <div className="flex items-center gap-3">
                             <div className="bg-red-custom rounded-full w-10 h-10 flex justify-center items-center">
                                 <SlEnvolope className="text-white text-2xl" />
@@ -39,7 +38,7 @@ const Contact: React.FC = () => {
                         </div>
                         <br />
                         <p>Fill out our form and we will contact you within 24 hours</p>
-                        <p className="my-3">Emails: customer@ecommerce.com</p>
+                        <p className="my-2">Emails: customer@ecommerce.com</p>
                         <p>Emails: support@ecommerce.com</p>
                     </div>
                 </div>

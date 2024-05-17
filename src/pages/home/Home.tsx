@@ -1,10 +1,12 @@
-import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { TbTruckDelivery, TbHeadset, TbDeviceWatch } from "react-icons/tb";
 import { RiShieldCheckLine } from "react-icons/ri";
 import { MdSmartphone, MdOutlineCameraAlt } from "react-icons/md";
 import { LuGamepad } from "react-icons/lu";
+import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
+import { FaApple } from "react-icons/fa6";
 
+import Iphone from "../../image/Iphone_frame_1.png";
 import Box from "../../image/JBL.png";
 import PS5 from "../../image/Frame_3/PS5_frame_3.png";
 import Woman from "../../image/Frame_3/Woman_frame_3.png";
@@ -14,44 +16,90 @@ import Perfume from "../../image/Frame_3/Perfume_frame_3.png";
 import Category from "../../components/service/category/Category";
 import Button from "../../components/forms/button/Button";
 import Carts from "../../components/service/carts/Carts";
-import { SP } from "next/dist/shared/lib/utils";
+
 
 const Home: React.FC = () => {
     return (
         <div className="w-[80%] mx-[10%] font-custom">
-            <div className="flex h-[60vh] container">
+            <div className="flex gap-16 h-[60vh] container">
                 <div className="w-[20%] border-gray-400 border-r-2 flex flex-col  justify-center items-center">
                     <ul className="font-medium text-lg">
                         <li className="mb-3">
-                            <p>Woman's Fashion</p>
+                            <a href="/" className="relative inline-block text-lg group">
+                                Woman's Fashion
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                            </a>
                         </li>
                         <li className="mb-3">
-                            <p>Men's Fashion</p>
+                            <a href="/" className="relative inline-block text-lg group">
+                                Men's Fashion
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                            </a>
                         </li>
                         <li className="mb-3">
-                            <p>Electronics</p>
+                            <a href="/" className="relative inline-block text-lg group">
+                                Electronics
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                            </a>
                         </li>
                         <li className="mb-3">
-                            <p>Home & Lifestyle</p>
+                            <a href="/" className="relative inline-block text-lg group">
+                                Home & Lifestyle
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                            </a>
                         </li>
                         <li className="mb-3">
-                            <p>Medicine</p>
+                            <a href="/" className="relative inline-block text-lg group">
+                                Medicine
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                            </a>
                         </li>
                         <li className="mb-3">
-                            <p>Sports & Outdoor</p>
+                            <a href="/" className="relative inline-block text-lg group">
+                                Sports & Outdoor
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                            </a>
                         </li>
                         <li className="mb-3">
-                            <p>Baby's & Toys</p>
+                            <a href="/" className="relative inline-block text-lg group">
+                                Baby's & Toys
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                            </a>
                         </li>
                         <li className="mb-3">
-                            <p>Groceries & Pets</p>
+                            <a href="/" className="relative inline-block text-lg group">
+                                Groceries & Pets
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                            </a>
                         </li>
                         <li className="mb-3">
-                            <p>Health & Beauty</p>
+                            <a href="/" className="relative inline-block text-lg group">
+                                Health & Beauty
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
+                            </a>
                         </li>
                     </ul>
                 </div>
-                <div className="bg-black w-[800px] h-[344px] m-auto my-10">
+                <div className="bg-black flex w-[75%] h-[80%] m-auto my-10 cursor-pointer">
+                    <div className="h-full w-1/2 flex flex-col gap-10 justify-center items-start ml-16">
+                        <div className="flex items-center gap-2">
+                            <FaApple className="text-white text-6xl" />
+                            <p className="text-white">Iphone 14 Series</p>
+                        </div>
+                        <div>
+                            <h1 className="text-white text-6xl">
+                                Up to 10% <br />
+                                off Voucher
+                            </h1>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <p className="text-white font-semibold underline underline-offset-4 decoration-gray-line">Shop Now</p>
+                            <IoMdArrowForward className="text-white text-2xl" />
+                        </div>
+                    </div>
+                    <div className="flex items-end w-1/2 h-full">
+                        <img src={Iphone} className="" />
+                    </div>
                 </div>
             </div>
             <div className="flex flex-col items-center w-full h-[80vh] my-[12%]">
@@ -63,10 +111,10 @@ const Home: React.FC = () => {
                     </div>
                     <div className="flex gap-4">
                         <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <HiArrowSmLeft className="text-black text-3xl" />
+                            <IoMdArrowBack className="text-black text-3xl" />
                         </div>
                         <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <HiArrowSmRight className="text-black text-3xl" />
+                            <IoMdArrowForward className="text-black text-3xl" />
                         </div>
                     </div>
                 </div>
@@ -83,10 +131,10 @@ const Home: React.FC = () => {
                     </div>
                     <div className="flex gap-4">
                         <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <HiArrowSmLeft className="text-black text-3xl" />
+                            <IoMdArrowBack className="text-black text-3xl" />
                         </div>
                         <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <HiArrowSmRight className="text-black text-3xl" />
+                            <IoMdArrowForward className="text-black text-3xl" />
                         </div>
                     </div>
                 </div>
@@ -139,7 +187,7 @@ const Home: React.FC = () => {
                 <div className="bg-black w-full h-[500px] rounded flex ">
                     <div className="h-full w-1/2 flex flex-col gap-10 justify-center items-start ml-16">
                         <p className="text-green-500 font-medium">Categories</p>
-                        <h2 className="text-white text-6xl">Enhance Your <br /> Music Experience</h2>
+                        <h1 className="text-white text-6xl">Enhance Your <br /> Music Experience</h1>
                         <div className="flex items-center gap-8">
                             <div className="bg-white rounded-full flex flex-col justify-center items-center w-20 h-20">
                                 <p className="font-semibold">05</p>
@@ -173,10 +221,10 @@ const Home: React.FC = () => {
                     </div>
                     <div className="flex gap-4">
                         <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <HiArrowSmLeft className="text-black text-3xl" />
+                            <IoMdArrowBack className="text-black text-3xl" />
                         </div>
                         <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <HiArrowSmRight className="text-black text-3xl" />
+                            <IoMdArrowForward className="text-black text-3xl" />
                         </div>
                     </div>
                 </div>

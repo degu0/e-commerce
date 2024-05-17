@@ -11,9 +11,19 @@ export default {
         'gray-placeholder': '#A0A3BD',
         'gray-input': '#EFF0F6',
         'gray-line': '#D9DBE9',
+        'secondary': '#F5F5F5'
       },
       fontFamily: {
-          custom: ["Poppins", 'sans-serif'],
+        custom: ["Poppins", 'sans-serif'],
+      },
+      keyframes: {
+        'underline-expand': {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+      },
+      animation: {
+        'underline-expand': 'underline-expand 0.5s ease-out forwards',
       },
     },
   },
