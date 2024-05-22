@@ -15,10 +15,11 @@ import Perfume from "../../image/Frame_3/Perfume_frame_3.png";
 
 import Category from "../../components/service/category/Category";
 import Button from "../../components/forms/button/Button";
-import Carts from "../../components/service/carts/Carts";
+import Carrosel from "../../components/service/carrosel/Carrosel";
 
 
 const Home: React.FC = () => {
+
     return (
         <div className="w-[80%] mx-[10%] font-custom">
             <div className="flex gap-16 h-[60vh] container">
@@ -109,16 +110,8 @@ const Home: React.FC = () => {
                         <h2 className="text-5xl font-semibold">Flash Sales</h2>
                         <p className="text-3xl font-semibold">03: 23: 19: 56</p>
                     </div>
-                    <div className="flex gap-4">
-                        <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <IoMdArrowBack className="text-black text-3xl" />
-                        </div>
-                        <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <IoMdArrowForward className="text-black text-3xl" />
-                        </div>
-                    </div>
                 </div>
-                <Carts />
+                <Carrosel />
                 <div className="my-[5%]">
                     <Button label="View All Products" />
                 </div>
@@ -128,14 +121,6 @@ const Home: React.FC = () => {
                 <div className="flex justify-between gap-40 w-full">
                     <div>
                         <h2 className="text-5xl font-semibold">Browse By Categories</h2>
-                    </div>
-                    <div className="flex gap-4">
-                        <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <IoMdArrowBack className="text-black text-3xl" />
-                        </div>
-                        <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <IoMdArrowForward className="text-black text-3xl" />
-                        </div>
                     </div>
                 </div>
                 <div className="flex justify-evenly items-center w-full h-1/2 ">
@@ -181,7 +166,7 @@ const Home: React.FC = () => {
                         <Button label="View All" />
                     </div>
                 </div>
-                <Carts />
+                <Carrosel />
             </div>
             <div className="flex justify-center items-center w-full h-[80vh] my-[5%]">
                 <div className="bg-black w-full h-[500px] rounded flex ">
@@ -219,17 +204,8 @@ const Home: React.FC = () => {
                     <div>
                         <h2 className="text-5xl font-semibold">Explore Our Products</h2>
                     </div>
-                    <div className="flex gap-4">
-                        <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <IoMdArrowBack className="text-black text-3xl" />
-                        </div>
-                        <div className="bg-slate-400 rounded-full w-12 h-12 flex justify-center items-center">
-                            <IoMdArrowForward className="text-black text-3xl" />
-                        </div>
-                    </div>
                 </div>
-                <Carts />
-                <Carts />
+                <Carrosel/>
                 <div className="mt-[5%]">
                     <Button label="View All Products" />
                 </div>

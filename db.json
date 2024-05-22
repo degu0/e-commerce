@@ -1,0 +1,73 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Game",
+            "price": 192.00,
+            "stock": true,
+            "description": "PlayStation 5 Controller Skin...",
+            "image": "./src/image/JBL.png",
+            "favorite": true
+        },
+        {
+            "id": 2,
+            "name": "Head Fone",
+            "price": 150.00,
+            "stock": true,
+            "description": "PlayStation 5 Controller Skin...",
+            "image":"./src/image/JBL.png",
+            "favorite": true
+        },
+        {
+            "id": 3,
+            "name": "Jbl",
+            "price": 1000.00,
+            "stock": true,
+            "description": "PlayStation 5 Controller Skin...",
+            "image": "./src/image/JBL.png",
+            "favorite": true
+        },
+        {
+            "id": 4,
+            "name": "Manga",
+            "price": 23.00,
+            "stock": true,
+            "description": "PlayStation 5 Controller Skin...",
+            "image": "./src/image/JBL.png",
+            "favorite": true
+        },
+        {
+            "id": 5,
+            "name": "Taclado",
+            "price": 120.00,
+            "stock": true,
+            "description": "PlayStation 5 Controller Skin...",
+            "image": "./src/image/JBL.png",
+            "favorite": true
+        },
+        {
+            "id": 6,
+            "name": "Cadeira",
+            "price": 100.00,
+            "stock": true,
+            "description": "PlayStation 5 Controller Skin...",
+            "image": "./src/image/JBL.png",
+            "favorite": true
+        },
+        {
+            "id": 7,
+            "name": "Pen Drive",
+            "price": 50.00,
+            "stock": true,
+            "description": "PlayStation 5 Controller Skin...",
+            "image":"./src/image/JBL.png",
+            "favorite": true
+        }
+    ],  
+    "shoppings": [
+        {
+            "id": 1,
+            "id_product": 1
+        }
+    ]
+}
