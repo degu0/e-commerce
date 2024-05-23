@@ -125,32 +125,32 @@ const Home: React.FC = () => {
                 </div>
                 <div className="flex justify-evenly items-center w-full h-1/2 ">
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white">
+                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
                         <MdSmartphone className="text-5xl" />
                         <h4 className="text-medium text-xl">Phones</h4>
                     </div>
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white">
+                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
                         <HiOutlineComputerDesktop className="text-5xl" />
                         <h4 className="text-medium text-xl">Computers</h4>
                     </div>
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white">
+                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
                         <TbDeviceWatch className="text-5xl" />
                         <h4 className="text-medium text-xl">SmartWatch</h4>
                     </div>
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white">
+                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
                         <MdOutlineCameraAlt className="text-5xl" />
                         <h4 className="text-medium text-xl">Camera</h4>
                     </div>
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white">
+                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
                         <TbHeadset className="text-5xl" />
                         <h4 className="text-medium text-xl">HeadPhone</h4>
                     </div>
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white">
+                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
                         <LuGamepad className="text-5xl" />
                         <h4 className="text-medium text-xl">Gaming</h4>
                     </div>

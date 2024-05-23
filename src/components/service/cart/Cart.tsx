@@ -1,4 +1,5 @@
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 interface CartProps {
     id: number;
@@ -8,9 +9,14 @@ interface CartProps {
 }
 
 const Cart: React.FC<CartProps> = ({ id, name, price, image }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/product/${id}`);
+    };
 
     return (
-        <div className="flex flex-col">
+        <div onClick={handleClick} className="flex flex-col cursor-pointer">
             <div className="bg-gray-line w-full h-1/2 rounded">
                 <img src={image} alt={name} />
             </div>

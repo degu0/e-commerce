@@ -9,7 +9,7 @@ import Wishlist from './pages/wishlist/Wishlist';
 import CheckOut from './pages/check_out/Check_out';
 import Login from './pages/login/logIn/Login';
 import SignUp from './pages/login/signUp/SignUp';
-import Product from './pages/product/Product';
+import ProductDetail from './pages/product/ProductDetail';
 
 
 
@@ -23,7 +23,7 @@ function App() {
             <Route path='/contact' element={<Contact/>} />
             <Route path='/wishlist' element={<Wishlist/>} />
             <Route path='/checkOut' element={<CheckOut/>} />
-            <Route path='/product' element={<Product/>} />
+            <Route path='/product/:id' element={<ProductDetail/>} />
             <Route path='/login' element={<Login/>} />
             <Route path='/signUp' element={<SignUp/>} />
         </Routes>
