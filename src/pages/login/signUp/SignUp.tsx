@@ -1,4 +1,5 @@
 import Image from '../../../image/Image_login.png';
+import Google from '../../../image/Google_Icon.svg';
 
 const SignUp: React.FC = () => {
     return (
@@ -21,8 +22,11 @@ const SignUp: React.FC = () => {
                         <button className="bg-red-custom w-full h-14 border-none rounded text-white text-normal mb-4">
                             Create Account
                         </button>
-                        <button className="bg-white w-full h-14 border-2 border-black rounded text-black text-normal mb-4">
-                            Sign Up with Google
+                        <button 
+                        className="bg-white w-full h-14 border-2 border-black rounded text-black 
+                        text-normal mb-4 flex items-center justify-center gap-2">
+                            <img src={Google} alt="Google Login" className='w-10' />
+                            Sign Up with Google 
                         </button>
                         <p className="text-gray-500 mt-2">
                             Already have account? <a href="/login" className="text-gray-500 underline">Login</a>    

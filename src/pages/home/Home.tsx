@@ -21,7 +21,7 @@ import Carrosel from "../../components/service/carrosel/Carrosel";
 const Home: React.FC = () => {
 
     return (
-        <div className="w-[80%] mx-[10%] font-custom">
+        <div className="max-w-7xl m-auto font-custom">
             <div className="flex gap-16 h-[60vh] container">
                 <div className="w-[20%] border-gray-400 border-r-2 flex flex-col  justify-center items-center">
                     <ul className="font-medium text-lg">
@@ -219,7 +219,7 @@ const Home: React.FC = () => {
                     <div className="relative flex gap-3 h-full w-full ">
                         <div className="bg-black w-full h-full flex relative">
                             <div className="absolute inset-0 flex justify-center items-center z-10">
-                                <img src={PS5} className="w-[81%] object-cover" />
+                                <img src={PS5} className="w-[80.7%] object-cover" />
                             </div>
                             <div className="relative flex flex-col gap-3 justify-end m-10 z-20">
                                 <h2 className="text-white font-semibold text-3xl">PlayStation 5</h2>

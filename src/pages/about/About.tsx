@@ -94,9 +94,9 @@ const About: React.FC = () => {
                         <h1 className="text-bold text-4xl">Tom Cruise</h1>
                         <h3 className="text-lg">Founder & Chairman</h3>
                         <div className="flex text-lg gap-2 mt-4">
-                            <RiInstagramLine />
-                            <RiTwitterXLine />
-                            <RiLinkedinLine />
+                            <RiInstagramLine className="cursor-pointer" />
+                            <RiTwitterXLine  className="cursor-pointer"/>
+                            <RiLinkedinLine  className="cursor-pointer"/>
                         </div>
                     </div>
                 </div>
@@ -108,9 +108,9 @@ const About: React.FC = () => {
                         <h1 className="text-bold text-4xl">Emma Watson</h1>
                         <h3 className="text-lg">Managing Director</h3>
                         <div className="flex text-lg gap-2 mt-4">
-                            <RiInstagramLine />
-                            <RiTwitterXLine />
-                            <RiLinkedinLine />
+                            <RiInstagramLine className="cursor-pointer" />
+                            <RiTwitterXLine  className="cursor-pointer"/>
+                            <RiLinkedinLine  className="cursor-pointer"/>
                         </div>
                     </div>
                 </div>
@@ -122,9 +122,9 @@ const About: React.FC = () => {
                         <h1 className="text-bold text-4xl">Will Smith</h1>
                         <h3 className="text-lg">Product Designer</h3>
                         <div className="flex gap-2 mt-4">
-                            <RiInstagramLine />
-                            <RiTwitterXLine />
-                            <RiLinkedinLine />
+                            <RiInstagramLine className="cursor-pointer" />
+                            <RiTwitterXLine  className="cursor-pointer"/>
+                            <RiLinkedinLine  className="cursor-pointer"/>
                         </div>
                     </div>
                 </div>
