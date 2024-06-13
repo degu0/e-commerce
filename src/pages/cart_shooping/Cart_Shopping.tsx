@@ -9,10 +9,11 @@ interface Product {
     description: string;
     image: string;
     favorite: boolean;
+    cart: boolean;
 }
 
-const WishList: React.FC = () => {
-    const { favorite } = useParams<{ favorite: string }>();
+const CartShopping: React.FC = () => {
+    const { cart } = useParams<{ cart: string }>();
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -29,10 +30,9 @@ const WishList: React.FC = () => {
             }
             
             const data: Product[] = await response.json();
-            console.log(data);
             
-            const isFavorite = favorite === "false";
-            const filteredProducts = data.filter(product => product.favorite !== isFavorite);
+            const isFavorite = cart === "false";
+            const filteredProducts = data.filter(product => product.cart !== isFavorite);
             
             setProducts(filteredProducts);
         } catch (err) {
@@ -44,7 +44,7 @@ const WishList: React.FC = () => {
 
     useEffect(() => {
         fetchData();
-    }, [favorite]);
+    }, [cart]);
 
     if (loading) {
         return <p>Loading...</p>;
@@ -74,10 +74,13 @@ const WishList: React.FC = () => {
                     </li>
                 ))}
             </ul>
+            <a href="/checkout">
+                <button className="bg-red-custom p-2">Compre</button>
+            </a>
         </div>
     );
 };
 
-export default WishList;
+export default CartShopping;
 
 

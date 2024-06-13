@@ -3,7 +3,7 @@ import { TbTruckDelivery, TbHeadset, TbDeviceWatch } from "react-icons/tb";
 import { RiShieldCheckLine } from "react-icons/ri";
 import { MdSmartphone, MdOutlineCameraAlt } from "react-icons/md";
 import { LuGamepad } from "react-icons/lu";
-import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
+import { IoMdArrowForward } from "react-icons/io";
 import { FaApple } from "react-icons/fa6";
 
 import Iphone from "../../image/Iphone_frame_1.png";
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center w-full h-[80vh] my-[12%]">
+            <div className="flex flex-col items-center w-full h-[90vh] mt-[12%]">
                 <Category name={"Today's"} />
                 <div className="flex justify-between gap-40 w-full">
                     <div className="flex items-center gap-x-40">
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
                     <Button label="View All Products" />
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-center w-full h-[80vh] my-[5%]">
+            <div className="flex flex-col justify-center items-center w-full h-[90vh] my-[5%]">
                 <Category name="Categories" />
                 <div className="flex justify-between gap-40 w-full">
                     <div>
@@ -156,7 +156,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-center w-full h-[80vh] my-[5%]">
+            <div className="flex flex-col justify-center items-center w-full h-[90vh] my-[5%]">
                 <Category name="This Mouth" />
                 <div className="flex justify-between items-center w-full">
                     <div>
@@ -168,7 +168,7 @@ const Home: React.FC = () => {
                 </div>
                 <Carrosel />
             </div>
-            <div className="flex justify-center items-center w-full h-[80vh] my-[5%]">
+            <div className="flex justify-center items-center w-full h-[90vh] my-[5%]">
                 <div className="bg-black w-full h-[500px] rounded flex ">
                     <div className="h-full w-1/2 flex flex-col gap-10 justify-center items-start ml-16">
                         <p className="text-green-500 font-medium">Categories</p>
@@ -272,7 +272,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-[80vh] flex items-center justify-around">
+            <div className="h-[90vh] flex items-center justify-around">
                 <div className="flex flex-col items-center justify-center">
                     <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center">
                         <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center">

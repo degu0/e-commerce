@@ -10,6 +10,7 @@ import CheckOut from './pages/check_out/Check_out';
 import Login from './pages/login/logIn/Login';
 import SignUp from './pages/login/signUp/SignUp';
 import ProductDetail from './pages/product/ProductDetail';
+import CartShopping from './pages/cart_shooping/Cart_Shopping';
 
 
 
@@ -22,6 +23,7 @@ function App() {
             <Route path='/about' element={<About/>} />
             <Route path='/contact' element={<Contact/>} />
             <Route path='/wishlist' element={<Wishlist/>} />
+            <Route path='/cart' element={<CartShopping/>} />
             <Route path='/checkOut' element={<CheckOut/>} />
             <Route path='/product/:id' element={<ProductDetail/>} />
             <Route path='/login' element={<Login/>} />

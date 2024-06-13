@@ -1,3 +1,5 @@
+import { FaRegHeart } from "react-icons/fa";
+
 const Header: React.FC = () => {
     return (
         <header className="flex flex-wrap items-center justify-around w-full h-1/6 pt-8 pb-4 border-b-2 border-gray-line font-custom">
@@ -39,10 +41,7 @@ const Header: React.FC = () => {
                     </li>
                     <li>
                         <a href="/wishlist">
-                            <svg className="h-8 w-8 text-black-900" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" />  <path d="M12 20l-7 -7a4 4 0 0 1 6.5 -6a.9 .9 0 0 0 1 0a4 4 0 0 1 6.5 6l-7 7" />
-                            </svg>
+                            <FaRegHeart className="h-6 w-6" />
                         </a>
                     </li>
                     <li>

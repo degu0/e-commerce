@@ -7,6 +7,9 @@ interface Product {
     id: number;
     name: string;
     price: number;
+    oldPrice: number;
+    percentage: number;
+    review: number;
     image: string;
 }
 
@@ -62,6 +65,9 @@ const Carrosel: React.FC = () => {
                                 id={product.id}
                                 name={product.name}
                                 price={product.price}
+                                oldPrice={product.oldPrice}
+                                percentage={product.percentage}
+                                review={product.review}
                                 image={product.image}
                             />
                         </div>
