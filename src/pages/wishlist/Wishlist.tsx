@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { GoTrash } from "react-icons/go";
+import { GrCart } from "react-icons/gr";
+import { useNavigate, useParams } from "react-router-dom";
 
 interface Product {
     id: number;
     name: string;
     price: number;
+    oldPrice: number;
+    percentage: number;
     stock: boolean;
     description: string;
     image: string;
@@ -16,24 +20,24 @@ const WishList: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
+    const navigate = useNavigate();
 
-    
+
 
     const fetchData = async () => {
         setLoading(true);
         try {
-            
+
             const response = await fetch("http://localhost:3000/products");
             if (!response.ok) {
                 throw new Error("Failed to fetch data");
             }
-            
+
             const data: Product[] = await response.json();
-            console.log(data);
-            
+
             const isFavorite = favorite === "false";
             const filteredProducts = data.filter(product => product.favorite !== isFavorite);
-            
+
             setProducts(filteredProducts);
         } catch (err) {
             setError((err as Error).message);
@@ -50,30 +54,60 @@ const WishList: React.FC = () => {
         return <p>Loading...</p>;
     }
 
-    
+
     if (error) {
         return <p>Error: {error}</p>;
     }
 
-    
+
     if (products.length === 0) {
         return <p>No products found</p>;
     }
 
+    // const handleClick = () => {
+    //     navigate(`/product/${id}`);
+    // };
+
+
     return (
         <div>
-            <h1>Detalhes do Produto</h1>
-            <ul>
-                {products.map(product => (
-                    <li key={product.id}>
-                        <img src={product.image} alt={product.name} />
-                        <h2>{product.name}</h2>
-                        <p>Price: ${product.price}</p>
-                        <p>{product.description}</p>
-                        <p>Stock: {product.stock ? "Avalible" : "Out on Stock"}</p>
-                    </li>
-                ))}
-            </ul>
+            <div className="max-w-7xl m-auto h-screen mt-20">
+                <div className="h-1/2 flex flex-col gap-y-16">
+                    <div className="flex justify-between items-center">
+                        <p className="text-xl">Wishlist ({products.length})</p>
+                        <button className="border-2 border-gray-500 rounded text-lg py-3 px-10">Move All To Bag</button>
+                    </div>
+                    <div className="w-64 h-56">
+                        {products.map(product => (
+                            <div key={product.id}>
+                                <div className="h-full">
+                                    <div className="bg-gray-200 border-none rounded-t flex flex-col items-center w-full h-52">
+                                        <div className="flex justify-between items-center w-full">
+                                            <div className="bg-red-custom rounded px-2 py-1 text-white m-3">
+                                                -{product.percentage}%
+                                            </div>
+                                            <div className="border-none rounded-full px-2 py-2 bg-white m-3">
+                                                <GoTrash />
+                                            </div>
+                                        </div>
+                                        <img src={product.image} alt={product.name} className="w-52" />
+                                    </div>
+                                    <div className="flex justify-center items-center gap-2 bg-black text-white p-3 rounded-b cursor-pointer">
+                                        <GrCart className="h-5 w-5" />
+                                        <p>Add To Cart</p>
+                                    </div>
+                                </div>
+                                <h2 className="text-lg font-medium">{product.name}</h2>
+                                <div className="flex items-center justify-start gap-2">
+                                    <p className="text-red-custom">${product.price}</p>
+                                    <p className="text-gray-300 line-through">{product.oldPrice}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div></div>
+            </div>
         </div>
     );
 };

@@ -20,9 +20,9 @@ const Cart: React.FC<CartProps> = ({ id, name, price, oldPrice, percentage, revi
 
     return (
         <div onClick={handleClick} className="flex flex-col cursor-pointer">
-            <div className="bg-gray-line w-full h-56 rounded">
-                <div className="bg-red-custom w-1/6 rounded px-2 py-1 text-white m-3">
-                    {percentage}%
+            <div className="bg-gray-200 w-full h-56 rounded">
+                <div className="bg-red-custom w-14 rounded px-2 py-1 text-white m-3">
+                    -{percentage}%
                 </div>
                 <div className="flex justify-center items-center">
                     <img src={image} alt={name} className="w-3/4" />

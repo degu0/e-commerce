@@ -76,8 +76,8 @@ const Footer: React.FC = () => {
                     </ul>
                 </div>
             </div>
-            <div className="border-2 border-slate-900 text-center p-2">
-                <p className="text-slate-800">TASLJDFHASJDFSDJF</p>
+            <div className="border-2 border-slate-800 text-center p-2">
+                <p className="text-slate-700">©	Ecommerce - 2024 </p>
             </div>
         </div>
     );
