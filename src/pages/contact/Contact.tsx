@@ -1,13 +1,13 @@
 import { FiPhone } from "react-icons/fi";
 import { SlEnvolope } from "react-icons/sl";
-import Button from "../../components/forms/button/Button";
-import Input from "../../components/forms/input/Input";
+import { Button } from "../../components/forms/button/Button";
+import { Input } from "../../components/forms/input/Input";
 
-const Contact: React.FC = () => {
+export function Contact() {
     return (
         <div className="h-screen font-custom">
             <div className="h-[15vh] flex items-center ml-24">
-                <p className="text-gray-500">
+                <p className="text-gray-500 tracking-widest">
                     Home / <label className="text-black">Contact</label>
                 </p>
             </div>
@@ -44,20 +44,18 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="w-[60%] h-[470px] border-none rounded shadow-lg flex flex-col justify-center items-center">
                     <div className="flex justify-around w-full ">
-                        <Input name="Name" placeholder="Your Name"/>
-                        <Input name="Name" placeholder="Your Email"/>
-                        <Input name="Name" placeholder="Your Phone"/>
+                        <Input name="Name" placeholder="Your Name" />
+                        <Input name="Name" placeholder="Your Email" />
+                        <Input name="Name" placeholder="Your Phone" />
                     </div>
                     <div className="w-full h-1/2 flex justify-center my-8">
                         <textarea name="compalint" placeholder="Your Massage" className="p-2 px-8 border-none rounded-md bg-gray-200 w-[92%] h-full"></textarea>
                     </div>
                     <div className="w-[92%] flex justify-end">
-                        <Button label="Send Massage"/>
+                        <Button label="Send Massage" />
                     </div>
                 </div>
             </div>
         </div>
     );
 }
-
-export default Contact;

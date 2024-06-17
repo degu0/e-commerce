@@ -2,7 +2,7 @@ interface CategoryProps {
     name: string;
 }
 
-const Category: React.FC<CategoryProps> = ({name}) => {
+export function Category({name}: CategoryProps) {
     return(
         <div className="flex items-center w-full mb-10">
             <div className=" rounded bg-red-custom w-5 h-10"></div>
@@ -10,5 +10,3 @@ const Category: React.FC<CategoryProps> = ({name}) => {
         </div>
     );
 }
-
-export default Category;

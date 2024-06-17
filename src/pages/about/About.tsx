@@ -8,11 +8,11 @@ import Tom from "../../image/About/image_1.png";
 import Emma from "../../image/About/image_2.png";
 import Will from "../../image/About/image_3.png";
 
-const About: React.FC = () => {
+export function About() {
     return (
         <div className="h-[315vh] font-custom">
             <div className="h-[15vh] flex items-center ml-24">
-                <p className="text-gray-500">
+                <p className="text-gray-500 tracking-widest">
                     Home / <label className="text-black">About</label>
                 </p>
             </div>
@@ -161,5 +161,3 @@ const About: React.FC = () => {
         </div>
     );
 }
-
-export default About;

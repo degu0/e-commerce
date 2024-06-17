@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { GoTrash } from "react-icons/go";
 import { GrCart } from "react-icons/gr";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 interface Product {
     id: number;
@@ -15,12 +15,11 @@ interface Product {
     favorite: boolean;
 }
 
-const WishList: React.FC = () => {
+export function Wishlist() {
     const { favorite } = useParams<{ favorite: string }>();
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
-    const navigate = useNavigate();
 
 
 
@@ -64,10 +63,6 @@ const WishList: React.FC = () => {
         return <p>No products found</p>;
     }
 
-    // const handleClick = () => {
-    //     navigate(`/product/${id}`);
-    // };
-
 
     return (
         <div>
@@ -110,8 +105,7 @@ const WishList: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
-export default WishList;
 
 

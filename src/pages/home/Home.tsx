@@ -13,12 +13,12 @@ import Woman from "../../image/Frame_3/Woman_frame_3.png";
 import Speakers from "../../image/Frame_3/Amazon_frame_3.png";
 import Perfume from "../../image/Frame_3/Perfume_frame_3.png";
 
-import Category from "../../components/service/category/Category";
-import Button from "../../components/forms/button/Button";
-import Carrosel from "../../components/service/carrosel/Carrosel";
+import { Category } from "../../components/service/category/Category";
+import { Button } from "../../components/forms/button/Button";
+import { Carrosel } from "../../components/service/carrosel/Carrosel";
 
 
-const Home: React.FC = () => {
+export function Home() {
 
     return (
         <div className="max-w-7xl m-auto font-custom">
@@ -205,7 +205,7 @@ const Home: React.FC = () => {
                         <h2 className="text-5xl font-semibold">Explore Our Products</h2>
                     </div>
                 </div>
-                <Carrosel/>
+                <Carrosel />
                 <div className="mt-[5%]">
                     <Button label="View All Products" />
                 </div>
@@ -216,10 +216,10 @@ const Home: React.FC = () => {
                     <h2 className="text-5xl font-semibold text-start">New Arrival</h2>
                 </div>
                 <div className="flex gap-3 h-full w-full my-10">
-                    <div className="relative flex gap-3 h-full w-full ">
+                    <div className="relative flex gap-3 h-full w-full cursor-pointer">
                         <div className="bg-black w-full h-full flex relative">
                             <div className="absolute inset-0 flex justify-center items-center z-10">
-                                <img src={PS5} className="w-[80.7%] object-cover" />
+                                <img src={PS5} className="w-[85%] object-cover" />
                             </div>
                             <div className="relative flex flex-col gap-3 justify-end m-10 z-20">
                                 <h2 className="text-white font-semibold text-3xl">PlayStation 5</h2>
@@ -231,7 +231,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="grid grid-rows-2 grid-flow-col gap-4 w-full">
+                    <div className="grid grid-rows-2 grid-flow-col gap-4 w-full cursor-pointer">
                         <div className="col-span-2 bg-black h-full w-full flex relative">
                             <div className="absolute inset-0 flex justify-end items-center z-10">
                                 <img src={Woman} className="h-full object-cover" />
@@ -304,5 +304,3 @@ const Home: React.FC = () => {
         </div>
     );
 }
-
-export default Home;

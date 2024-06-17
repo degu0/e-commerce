@@ -2,7 +2,7 @@ interface SizeProps {
     label: string;
 }
 
-const Size: React.FC<SizeProps> = ({ label }) => {
+export function Size({ label }: SizeProps) {
     return (
         <label
             className="has-[:checked]:bg-white/30 has-[:checked]:text-white has-[:checked]:border-none has-[:checked]:bg-red-custom cursor-pointer 
@@ -19,5 +19,3 @@ const Size: React.FC<SizeProps> = ({ label }) => {
         </label>
     );
 }
-
-export default Size;

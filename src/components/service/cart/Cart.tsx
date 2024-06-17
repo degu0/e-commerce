@@ -11,7 +11,7 @@ interface CartProps {
     image: string;
 }
 
-const Cart: React.FC<CartProps> = ({ id, name, price, oldPrice, percentage, review, image }) => {
+export function Cart({ id, name, price, oldPrice, percentage, review, image }: CartProps) {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -25,7 +25,7 @@ const Cart: React.FC<CartProps> = ({ id, name, price, oldPrice, percentage, revi
                     -{percentage}%
                 </div>
                 <div className="flex justify-center items-center">
-                    <img src={image} alt={name} className="w-3/4" />
+                    <img src={image} alt={name} className="w-32" />
                 </div>
             </div>
             <div>
@@ -46,5 +46,3 @@ const Cart: React.FC<CartProps> = ({ id, name, price, oldPrice, percentage, revi
         </div>
     );
 }
-
-export default Cart;

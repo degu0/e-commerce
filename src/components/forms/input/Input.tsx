@@ -4,10 +4,8 @@ interface InputProps {
     type?: string;
 }
 
-const Input: React.FC<InputProps> = ({ name, placeholder, type = 'text' }) => {
+export function Input ({ name, placeholder, type = 'text' }: InputProps) {
     return (
         <input type={type} name={name} className="w-1/4 p-4 border-none rounded-md bg-gray-input text-gray-placeholder" placeholder={placeholder} />
     )
 }
-
-export default Input;

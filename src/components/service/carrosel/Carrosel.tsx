@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Cart from "../cart/Cart";
+import { Cart } from "../cart/Cart";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -13,7 +13,7 @@ interface Product {
     image: string;
 }
 
-const Carrosel: React.FC = () => {
+export function Carrosel() {
     const [products, setProducts] = useState<Product[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const itemsPerPage = 2; // Número de itens a serem exibidos por vez
@@ -45,7 +45,7 @@ const Carrosel: React.FC = () => {
 
     const nextSlide = () => {
         if (currentIndex < Math.ceil(products.length / itemsPerPage) - 1) {
-            setCurrentIndex(currentIndex + 1);
+            setCurrentIndex(currentIndex + 1.5);
         }
     };
 
@@ -60,7 +60,7 @@ const Carrosel: React.FC = () => {
             >
                 {products.length > 0 &&
                     products.map((product: Product) => (
-                        <div key={product.id} className="w-1/4 flex-shrink-0 p-2">
+                        <div key={product.id} className="w-[20%] flex-shrink-0 p-2">
                             <Cart
                                 id={product.id}
                                 name={product.name}
@@ -89,6 +89,4 @@ const Carrosel: React.FC = () => {
             </button>
         </div>
     );
-};
-
-export default Carrosel;
+}

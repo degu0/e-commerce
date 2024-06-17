@@ -1,6 +1,6 @@
 import Image from '../../../image/Image_login.png';
 
-const Login: React.FC = () => {
+export function Login() {
     return (
         <div className="w-full h-screen flex font-custom">
             <div className="w-[60%] bg-blue-login flex justify-center items-end">
@@ -25,5 +25,3 @@ const Login: React.FC = () => {
         </div>
     );
 }
-
-export default Login;

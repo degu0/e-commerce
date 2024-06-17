@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { FaRegHeart, FaStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
-import Size from "../../components/forms/size/Size";
+import { Size } from "../../components/forms/size/Size";
 import { LuTruck } from "react-icons/lu";
 import { GrReturn } from "react-icons/gr";
-import Category from "../../components/service/category/Category";
-import Button from "../../components/forms/button/Button";
-import Carrosel from "../../components/service/carrosel/Carrosel";
+import { Category } from "../../components/service/category/Category";
+import { Carrosel } from "../../components/service/carrosel/Carrosel";
 
 interface Product {
   id: number;
@@ -19,7 +18,7 @@ interface Product {
   favorite: boolean;
 }
 
-const ProductDetail: React.FC = () => {
+export function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -69,8 +68,8 @@ const ProductDetail: React.FC = () => {
       <div className="h-full max-w-7xl m-auto">
         <div className="flex justify-center items-center h-screen gap-10">
           <div className="w-5/6 h-4/6 flex justify-center items-center">
-            <div className="bg-gray-300 border-none rounded w-3/4 h-full">
-              <img src={product.image} alt={product.name} className="w-full" />
+            <div className="bg-gray-300 border-none rounded w-3/4 h-full flex justify-center items-center">
+              <img src={product.image} alt={product.name} className="w-1/2" />
             </div>
           </div>
           <div className="flex flex-col gap-3 w-3/6">
@@ -134,8 +133,5 @@ const ProductDetail: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default ProductDetail;
-
+}
 

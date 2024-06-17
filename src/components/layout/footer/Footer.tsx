@@ -1,4 +1,4 @@
-const Footer: React.FC = () => {
+export function Footer(){
     return (
         <div className="bg-black w-full h-full border-2 border-white  text-white font-custom">
             <div className="flex items-center justify-around p-10">
@@ -82,5 +82,3 @@ const Footer: React.FC = () => {
         </div>
     );
 }
-
-export default Footer;

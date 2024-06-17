@@ -1,7 +1,7 @@
 import { FaRegHeart } from "react-icons/fa";
 import { GrCart } from "react-icons/gr";
 
-const Header: React.FC = () => {
+export function Header() {
     return (
         <header className="flex flex-wrap items-center justify-around w-full h-1/6 pt-8 pb-4 border-b-2 border-gray-line font-custom">
             <div>
@@ -55,5 +55,3 @@ const Header: React.FC = () => {
         </header>
     );
 }
-
-export default Header;

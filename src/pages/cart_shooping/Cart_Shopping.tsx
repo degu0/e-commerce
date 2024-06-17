@@ -12,7 +12,7 @@ interface Product {
     cart: boolean;
 }
 
-const CartShopping: React.FC = () => {
+export function CartShopping() {
     const { cart } = useParams<{ cart: string }>();
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
@@ -63,7 +63,7 @@ const CartShopping: React.FC = () => {
     return (
         <div>
             <div className="h-[15vh] flex items-center ml-44">
-                <p className="text-gray-500">
+                <p className="text-gray-500 tracking-widest">
                     Home / <label className="text-black">Cart</label>
                 </p>
             </div>
@@ -117,8 +117,10 @@ const CartShopping: React.FC = () => {
                                 <p>Total: </p>
                                 <p>R$ 1730</p>
                             </div>
-                            <div className="flex justify-center items-center">
-                                <button className="border-none rounded bg-red-custom text-white w-1/2 p-3 ">Process to checkout</button>
+                            <div className="">
+                                <a href="/checkout" className="w-full flex justify-center items-center">
+                                    <button className="border-none rounded bg-red-custom text-white w-1/2 p-3 ">Process to checkout</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -126,8 +128,7 @@ const CartShopping: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
-export default CartShopping;
 
 

@@ -1,7 +1,7 @@
 import Image from '../../../image/Image_login.png';
 import Google from '../../../image/Google_Icon.svg';
 
-const SignUp: React.FC = () => {
+export function SignUp() {
     return (
     <div className="w-full h-screen flex font-custom">
             <div className="w-[60%] bg-blue-login flex justify-center items-end">
@@ -37,5 +37,3 @@ const SignUp: React.FC = () => {
         </div>
     );
 }
-
-export default SignUp;
