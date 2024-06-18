@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { GoTrash } from "react-icons/go";
 import { GrCart } from "react-icons/gr";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 interface Product {
     id: number;
@@ -20,22 +20,19 @@ export function Wishlist() {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
-
-
+    const navigate = useNavigate();
 
     const fetchData = async () => {
         setLoading(true);
         try {
-
             const response = await fetch("http://localhost:3000/products");
             if (!response.ok) {
                 throw new Error("Failed to fetch data");
             }
 
             const data: Product[] = await response.json();
-
-            const isFavorite = favorite === "false";
-            const filteredProducts = data.filter(product => product.favorite !== isFavorite);
+            const isFavorite = favorite !== "true";
+            const filteredProducts = data.filter(product => product.favorite === isFavorite);
 
             setProducts(filteredProducts);
         } catch (err) {
@@ -53,59 +50,58 @@ export function Wishlist() {
         return <p>Loading...</p>;
     }
 
-
     if (error) {
         return <p>Error: {error}</p>;
     }
-
 
     if (products.length === 0) {
         return <p>No products found</p>;
     }
 
+    const handleClick = (id: number) => {
+        navigate(`/product/${id}`);
+    };
 
     return (
         <div>
-            <div className="max-w-7xl m-auto h-screen mt-20">
+            <div className="max-w-7xl m-auto h-[120vh] mt-20">
                 <div className="h-1/2 flex flex-col gap-y-16">
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center font-semibold">
                         <p className="text-xl">Wishlist ({products.length})</p>
                         <button className="border-2 border-gray-500 rounded text-lg py-3 px-10">Move All To Bag</button>
                     </div>
-                    <div className="w-64 h-56">
+                    <div className="w-full h-full grid grid-cols-4 gap-4">
                         {products.map(product => (
                             <div key={product.id}>
-                                <div className="h-full">
+                                <div>
                                     <div className="bg-gray-200 border-none rounded-t flex flex-col items-center w-full h-52">
                                         <div className="flex justify-between items-center w-full">
                                             <div className="bg-red-custom rounded px-2 py-1 text-white m-3">
                                                 -{product.percentage}%
                                             </div>
-                                            <div className="border-none rounded-full px-2 py-2 bg-white m-3">
+                                            <div className="border-none rounded-full px-2 py-2 bg-white m-3 cursor-pointer">
                                                 <GoTrash />
                                             </div>
                                         </div>
-                                        <img src={product.image} alt={product.name} className="w-52" />
+                                        <img src={product.image} alt={product.name} className="w-1/2" />
                                     </div>
                                     <div className="flex justify-center items-center gap-2 bg-black text-white p-3 rounded-b cursor-pointer">
                                         <GrCart className="h-5 w-5" />
                                         <p>Add To Cart</p>
                                     </div>
                                 </div>
-                                <h2 className="text-lg font-medium">{product.name}</h2>
-                                <div className="flex items-center justify-start gap-2">
-                                    <p className="text-red-custom">${product.price}</p>
-                                    <p className="text-gray-300 line-through">{product.oldPrice}</p>
+                                <div onClick={() => handleClick(product.id)} className="cursor-pointer">
+                                    <h2 className="text-lg font-medium mt-2">{product.name}</h2>
+                                    <div className="flex items-center justify-start gap-2 mt-1">
+                                        <p className="text-red-custom">${product.price}</p>
+                                        <p className="text-gray-300 line-through">{product.oldPrice}</p>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div></div>
             </div>
         </div>
     );
 }
-
-
-

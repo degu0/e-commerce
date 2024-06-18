@@ -7,6 +7,7 @@ interface Product {
     id: number;
     name: string;
     price: number;
+    quantityShopping: number;
     stock: boolean;
     description: string;
     image: string;
@@ -17,6 +18,7 @@ interface Product {
 export function CheckOut() {
     const { cart } = useParams<{ cart: string }>();
     const [products, setProducts] = useState<Product[]>([]);
+    const [totalPrice, setTotalPrice] = useState<number>(0);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -43,6 +45,11 @@ export function CheckOut() {
             setLoading(false);
         }
     };
+
+    useEffect(() => {
+        const total = products.reduce((sum, product) => sum + (product.price * product.quantityShopping), 0);
+        setTotalPrice(total);
+    }, [products]);
 
     useEffect(() => {
         fetchData();
@@ -108,14 +115,14 @@ export function CheckOut() {
                                         <img src={product.image} alt={product.name} className="h-12" />
                                         <p>{product.name}</p>
                                     </div>
-                                    <p>${product.price}</p>
+                                    <p>${product.price * product.quantityShopping}</p>
                                 </div>
                             ))}
                         </div>
                         <div className="flex flex-col gap-4 font-semibold">
                             <div className="flex justify-between items-center">
                                 <p>Subtotal: </p>
-                                <p>R$ 1730</p>
+                                <p>${totalPrice}</p>
                             </div>
                             <hr />
                             <div className="flex justify-between items-center">
@@ -125,7 +132,7 @@ export function CheckOut() {
                             <hr />
                             <div className="flex justify-between items-center">
                                 <p>Total: </p>
-                                <p>R$ 1730</p>
+                                <p>${totalPrice}</p>
                             </div>
                         </div>
                         <div>

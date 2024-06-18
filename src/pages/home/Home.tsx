@@ -5,9 +5,10 @@ import { MdSmartphone, MdOutlineCameraAlt } from "react-icons/md";
 import { LuGamepad } from "react-icons/lu";
 import { IoMdArrowForward } from "react-icons/io";
 import { FaApple } from "react-icons/fa6";
+import { AdMusic } from "../../components/service/ad_music/AdMusic";
+import { ProductList } from "../../components/service/show_products/showProducts";
 
 import Iphone from "../../image/Iphone_frame_1.png";
-import Box from "../../image/JBL.png";
 import PS5 from "../../image/Frame_3/PS5_frame_3.png";
 import Woman from "../../image/Frame_3/Woman_frame_3.png";
 import Speakers from "../../image/Frame_3/Amazon_frame_3.png";
@@ -16,6 +17,7 @@ import Perfume from "../../image/Frame_3/Perfume_frame_3.png";
 import { Category } from "../../components/service/category/Category";
 import { Button } from "../../components/forms/button/Button";
 import { Carrosel } from "../../components/service/carrosel/Carrosel";
+import { Timer } from "../../components/service/timer/Timer";
 
 
 export function Home() {
@@ -105,13 +107,13 @@ export function Home() {
             </div>
             <div className="flex flex-col items-center w-full h-[90vh] mt-[12%]">
                 <Category name={"Today's"} />
-                <div className="flex justify-between gap-40 w-full">
-                    <div className="flex items-center gap-x-40">
-                        <h2 className="text-5xl font-semibold">Flash Sales</h2>
-                        <p className="text-3xl font-semibold">03: 23: 19: 56</p>
-                    </div>
+                <div className="flex items-end gap-x-24 w-full mb-8">
+                    <h2 className="text-5xl font-semibold">Flash Sales</h2>
+                    <Timer />
                 </div>
-                <Carrosel />
+                <div className="w-full">
+                    <Carrosel />
+                </div>
                 <div className="my-[5%]">
                     <Button label="View All Products" />
                 </div>
@@ -158,57 +160,23 @@ export function Home() {
             </div>
             <div className="flex flex-col justify-center items-center w-full h-[90vh] my-[5%]">
                 <Category name="This Mouth" />
-                <div className="flex justify-between items-center w-full">
-                    <div>
-                        <h2 className="text-5xl font-semibold">Best Selling Products</h2>
-                    </div>
-                    <div>
-                        <Button label="View All" />
-                    </div>
+                <div className="flex justify-between items-end w-full mb-8">
+                    <h2 className="text-5xl font-semibold">Best Selling Products</h2>
+                    <Button label="View All" />
                 </div>
-                <Carrosel />
+                <div className="w-full">
+                    <Carrosel />
+                </div>
             </div>
             <div className="flex justify-center items-center w-full h-[90vh] my-[5%]">
-                <div className="bg-black w-full h-[500px] rounded flex ">
-                    <div className="h-full w-1/2 flex flex-col gap-10 justify-center items-start ml-16">
-                        <p className="text-green-500 font-medium">Categories</p>
-                        <h1 className="text-white text-6xl">Enhance Your <br /> Music Experience</h1>
-                        <div className="flex items-center gap-8">
-                            <div className="bg-white rounded-full flex flex-col justify-center items-center w-20 h-20">
-                                <p className="font-semibold">05</p>
-                                <p className="text-sm">Days</p>
-                            </div>
-                            <div className="bg-white rounded-full flex flex-col justify-center items-center w-20 h-20">
-                                <p className="font-semibold">23</p>
-                                <p className="text-sm">Hours</p>
-                            </div>
-                            <div className="bg-white rounded-full flex flex-col justify-center items-center w-20 h-20">
-                                <p className="font-semibold">59</p>
-                                <p className="text-sm">Minutes</p>
-                            </div>
-                            <div className="bg-white rounded-full flex flex-col justify-center items-center w-20 h-20">
-                                <p className="font-semibold">35</p>
-                                <p className="text-sm">Seconds</p>
-                            </div>
-                        </div>
-                        <button className="bg-green-500 text-white py-5 px-10 rounded">Buy Now!</button>
-                    </div>
-                    <div className="flex items-center justify-center">
-                        <img src={Box} className="drop-shadow-xl shadow-white " />
-                    </div>
-                </div>
+                <AdMusic />
             </div>
             <div className="flex flex-col justify-center items-center w-full my-[5%]">
                 <Category name="Our Products" />
-                <div className="flex justify-between w-full">
-                    <div>
-                        <h2 className="text-5xl font-semibold">Explore Our Products</h2>
-                    </div>
+                <div className="flex justify-between w-full mb-8">
+                    <h2 className="text-5xl font-semibold">Explore Our Products</h2>
                 </div>
-                <Carrosel />
-                <div className="mt-[5%]">
-                    <Button label="View All Products" />
-                </div>
+                <ProductList />
             </div>
             <div className="flex flex-col justify-center items-center w-full h-screen">
                 <Category name="Featured" />

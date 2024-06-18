@@ -5,7 +5,7 @@ interface SizeProps {
 export function Size({ label }: SizeProps) {
     return (
         <label
-            className="has-[:checked]:bg-white/30 has-[:checked]:text-white has-[:checked]:border-none has-[:checked]:bg-red-custom cursor-pointer 
+            className="has-[:checked]:bg-white/30 has-[:checked]:text-white has-[:checked]:border-none has-[:checked]:bg-red-500 cursor-pointer 
         border-2 border-gray-300 w-10 h-10 rounded-md flex justify-center items-center"
         >
             <div>

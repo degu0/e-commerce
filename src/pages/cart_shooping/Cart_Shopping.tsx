@@ -5,6 +5,7 @@ interface Product {
     id: number;
     name: string;
     price: number;
+    quantityShopping: number;
     stock: boolean;
     description: string;
     image: string;
@@ -15,6 +16,7 @@ interface Product {
 export function CartShopping() {
     const { cart } = useParams<{ cart: string }>();
     const [products, setProducts] = useState<Product[]>([]);
+    const [totalPrice, setTotalPrice] = useState<number>(0);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -41,6 +43,11 @@ export function CartShopping() {
             setLoading(false);
         }
     };
+
+    useEffect(() => {
+        const total = products.reduce((sum, product) => sum + (product.price * product.quantityShopping), 0);
+        setTotalPrice(total);
+    }, [products]);
 
     useEffect(() => {
         fetchData();
@@ -78,21 +85,22 @@ export function CartShopping() {
                         </li>
                     </ul>
                     {products.map(product => (
-                        <ul >
-                            <li key={product.id} className="shadow flex justify-between py-8">
-                                <div className="flex justify-center items-center gap-3 ml-10">
-                                    <img src={product.image} alt={product.name} className="w-12 h-10" />
-                                    <h2>{product.name}</h2>
+                        <ul>
+                            <li key={product.id} className="shadow flex justify-between items-center py-5">
+                                <div className="flex justify-center items-center ml-12">
+                                    <img src={product.image} alt={product.name} className="w-12 h-10" title={product.name} />
                                 </div>
                                 <p>${product.price}</p>
-                                <input type="number" name="" id="" className="border-2 border-gray-300 rounded w-12" />
-                                <p className="mr-10">${product.price}</p>
+                                <div className="w-14 h-12 border-2 border-gray-300 rounded flex justify-center items-center">
+                                    <p>{product.quantityShopping}</p>
+                                </div>
+                                <p className="mr-14">${product.price}</p>
                             </li>
                         </ul>
                     ))}
                     <div className="flex items-center justify-between">
-                        <button className="border-2 border-gray-400 rounded py-3 px-14">Return To Shop</button>
-                        <button className="border-2 border-gray-400 rounded py-3 px-14">Update Cart</button>
+                        <button className="border-2 border-gray-400 rounded py-3 px-14 font-semibold">Return To Shop</button>
+                        <button className="border-2 border-gray-400 rounded py-3 px-14 font-semibold">Update Cart</button>
                     </div>
                 </div>
                 <div className="flex items-start justify-between h-screen">
@@ -100,12 +108,12 @@ export function CartShopping() {
                         <input type="text" placeholder="Coupon Code" className="border-black border-2 rounded p-3 w-6/12" />
                         <button className="border-none bg-red-custom text-white py-3 h-full rounded w-4/12">Apply Coupon</button>
                     </div>
-                    <div className="w-2/5 border-2 border-black">
+                    <div className="w-2/5 border-2 border-black font-semibold">
                         <div className="flex flex-col gap-4 max-w-md m-auto my-8">
-                            <p className="text-xl font-semibold">Cart Total</p>
+                            <p className="text-xl">Cart Total</p>
                             <div className="flex justify-between items-center">
                                 <p>Subtotal: </p>
-                                <p>R$ 1730</p>
+                                <p>${totalPrice}</p>
                             </div>
                             <hr />
                             <div className="flex justify-between items-center">
@@ -115,7 +123,7 @@ export function CartShopping() {
                             <hr />
                             <div className="flex justify-between items-center">
                                 <p>Total: </p>
-                                <p>R$ 1730</p>
+                                <p>${totalPrice}</p>
                             </div>
                             <div className="">
                                 <a href="/checkout" className="w-full flex justify-center items-center">

@@ -1,7 +1,7 @@
-export function Footer(){
+export function Footer() {
     return (
-        <div className="bg-black w-full h-full border-2 border-white  text-white font-custom">
-            <div className="flex items-center justify-around p-10">
+        <footer className="bg-black text-white w-full border-t-2 border-white font-custom">
+            <div className="container mx-auto flex flex-wrap justify-around items-center py-10">
                 <div>
                     <ul>
                         <li className="py-4">
@@ -11,10 +11,14 @@ export function Footer(){
                             <p>Subscribe</p>
                         </li>
                         <li className="pb-4">
-                            <p>Get 10% off your fist order</p>
+                            <p>Get 10% off your first order</p>
                         </li>
                         <li className="pb-4">
-                            <input type="text" className="bg-transparent border-2 border-white rounded p-2" placeholder="Enter your email" />
+                            <input
+                                type="text"
+                                className="bg-transparent border-2 border-white rounded p-2"
+                                placeholder="Enter your email"
+                            />
                         </li>
                     </ul>
                 </div>
@@ -24,7 +28,7 @@ export function Footer(){
                             <h3 className="text-2xl font-bold">Support</h3>
                         </li>
                         <li className="pb-4">
-                            <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+                            <p>111 Bijoy Sarani, Dhaka, DH 1515, Bangladesh.</p>
                         </li>
                         <li className="pb-4">
                             <p>exclusive@gmail.com</p>
@@ -64,7 +68,7 @@ export function Footer(){
                         <li className="pb-4">
                             <p>Privacy Policy</p>
                         </li>
-                        <li>
+                        <li className="pb-4">
                             <p>Terms Of Use</p>
                         </li>
                         <li className="pb-4">
@@ -76,9 +80,9 @@ export function Footer(){
                     </ul>
                 </div>
             </div>
-            <div className="border-2 border-slate-800 text-center p-2">
-                <p className="text-slate-700">©	Ecommerce - 2024 </p>
+            <div className="border-t border-slate-800 text-center p-2">
+                <p className="text-slate-700">© Ecommerce - 2024</p>
             </div>
-        </div>
+        </footer>
     );
 }

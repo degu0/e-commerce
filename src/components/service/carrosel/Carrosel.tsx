@@ -50,7 +50,7 @@ export function Carrosel() {
     };
 
     return (
-        <div className="relative w-full h-full overflow-hidden flex items-center">
+        <div className="relative  overflow-hidden flex items-center">
             <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{
