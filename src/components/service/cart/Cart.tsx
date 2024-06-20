@@ -18,9 +18,6 @@ export function Cart({ id, name, price, oldPrice, percentage, review, image }: C
         navigate(`/product/${id}`);
     };
 
-
-    
-
     return (
         <div onClick={handleClick} className="flex flex-col cursor-pointer">
             <div className="bg-gray-200 w-full h-56 rounded">

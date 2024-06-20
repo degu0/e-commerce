@@ -1,67 +1,61 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { TiDelete } from "react-icons/ti";
 
 interface Product {
-    id: number;
-    name: string;
+    id: string;
+    productId: string;
+    productName: string;
+    productImage: string;
     price: number;
-    quantityShopping: number;
-    stock: boolean;
-    description: string;
-    image: string;
-    favorite: boolean;
-    cart: boolean;
+    quantity: number;
 }
 
 export function CartShopping() {
-    const { cart } = useParams<{ cart: string }>();
     const [products, setProducts] = useState<Product[]>([]);
     const [totalPrice, setTotalPrice] = useState<number>(0);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    const [hoveredProductId, setHoveredProductId] = useState<string | null>(null);
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/purchases', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data: Product[] = await response.json();
+                setProducts(data);
+            } catch (err) {
+                console.error(err);
+            }
+        };
 
+        fetchData();
+    }, []);
 
-    const fetchData = async () => {
-        setLoading(true);
+    const handleDeletePurchase = async (id: string) => {
         try {
+            const response = await fetch(`http://localhost:3000/purchases/${id}`, {
+                method: 'DELETE',
+            });
 
-            const response = await fetch("http://localhost:3000/products");
             if (!response.ok) {
-                throw new Error("Failed to fetch data");
+                throw new Error('Failed to delete purchase');
             }
 
-            const data: Product[] = await response.json();
-
-            const isFavorite = cart === "false";
-            const filteredProducts = data.filter(product => product.cart !== isFavorite);
-
-            setProducts(filteredProducts);
-        } catch (err) {
-            setError((err as Error).message);
-        } finally {
-            setLoading(false);
+            alert('Purchase deleted successfully');
+            setProducts(products.filter(product => product.id !== id));
+        } catch (error) {
+            console.error('Error deleting purchase:', error);
+            alert('Error deleting purchase');
         }
     };
 
     useEffect(() => {
-        const total = products.reduce((sum, product) => sum + (product.price * product.quantityShopping), 0);
+        const total = products.reduce((sum, product) => sum + (product.price * product.quantity), 0);
         setTotalPrice(total);
     }, [products]);
-
-    useEffect(() => {
-        fetchData();
-    }, [cart]);
-
-    if (loading) {
-        return <p>Loading...</p>;
-    }
-
-
-    if (error) {
-        return <p>Error: {error}</p>;
-    }
-
 
     if (products.length === 0) {
         return <p>No products found</p>;
@@ -85,16 +79,29 @@ export function CartShopping() {
                         </li>
                     </ul>
                     {products.map(product => (
-                        <ul>
-                            <li key={product.id} className="shadow flex justify-between items-center py-5">
-                                <div className="flex justify-center items-center ml-12">
-                                    <img src={product.image} alt={product.name} className="w-12 h-10" title={product.name} />
+                        <ul key={product.id}>
+                            <li
+                                className="relative shadow flex justify-between items-center py-5"
+                                onMouseEnter={() => setHoveredProductId(product.id)}
+                                onMouseLeave={() => setHoveredProductId(null)}
+                            >
+                                {hoveredProductId === product.id && (
+                                    <div
+                                        className="absolute top-0 left-0 text-4xl text-red-custom cursor-pointer"
+                                        onClick={() => handleDeletePurchase(product.id)}
+                                        style={{ transform: 'translate(-50%, -50%)' }}
+                                    >
+                                        <TiDelete />
+                                    </div>
+                                )}
+                                <div className="flex justify-center items-center ml-12 relative">
+                                    <img src={product.productImage} alt={product.productName} className="w-12 h-10" title={product.productName} />
                                 </div>
                                 <p>${product.price}</p>
                                 <div className="w-14 h-12 border-2 border-gray-300 rounded flex justify-center items-center">
-                                    <p>{product.quantityShopping}</p>
+                                    <p>{product.quantity}</p>
                                 </div>
-                                <p className="mr-14">${product.price}</p>
+                                <p className="mr-14">${product.price * product.quantity}</p>
                             </li>
                         </ul>
                     ))}
@@ -137,6 +144,3 @@ export function CartShopping() {
         </div>
     );
 }
-
-
-

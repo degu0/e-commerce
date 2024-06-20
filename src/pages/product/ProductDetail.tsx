@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaRegHeart, FaStar } from "react-icons/fa";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Size } from "../../components/forms/size/Size";
 import { LuTruck } from "react-icons/lu";
 import { GrReturn } from "react-icons/gr";
@@ -26,6 +26,7 @@ export function ProductDetail() {
   const [number, setNumber] = useState(0);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,9 +54,63 @@ export function ProductDetail() {
     if (product) {
       const updatedProduct = {
         ...product,
-        favorite: !product.favorite
+        favorite: !product.favorite,
       };
       setProduct(updatedProduct);
+      updateProductFavoriteOnServer(product.id, !product.favorite);
+    }
+  };
+
+  const updateProductFavoriteOnServer = (productId: number, newFavoriteStatus: boolean) => {
+    fetch(`http://localhost:3000/products/${productId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ favorite: newFavoriteStatus }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Product favorite status updated:', data);
+      })
+      .catch((error) => {
+        console.error('Error updating product favorite status:', error);
+      });
+  };
+
+  const handleBuyNow = async () => {
+    if (!product || number <= 0) {
+      alert("Please select a valid quantity.");
+      return;
+    }
+
+    const purchase = {
+      productId: product.id,
+      productName: product.name,
+      productImage: product.image,
+      quantity: number,
+      price: product.price,
+      date: new Date().toISOString()
+    };
+
+    try {
+      const response = await fetch(`http://localhost:3000/purchases`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(purchase)
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to create purchase");
+      }
+
+      alert("Purchase successful!");
+      navigate('/cart');
+    } catch (error) {
+      console.error("Error creating purchase:", error);
+      alert("Error creating purchase");
     }
   };
 
@@ -86,7 +141,7 @@ export function ProductDetail() {
             </div>
           </div>
           <div className="flex flex-col gap-6 w-3/6">
-            <h2 className="font-bold text-4xl ">{product.name}</h2>
+            <h2 className="font-bold text-4xl">{product.name}</h2>
             <div className="flex items-center gap-5">
               <div className="flex items-center gap-2">
                 <FaStar className="text-yellow-400" />
@@ -97,10 +152,10 @@ export function ProductDetail() {
               </div>
               <p className="text-gray-400">({product.review} reviews)</p>
               |
-              {product.stock ? (
+              {product.stock && product.quantityTotal > 0 ? (
                 <p className="text-green-500">In Stock</p>
               ) : (
-                <p className="text-red-custom">Falta</p>
+                <p className="text-red-custom">Out of Stock</p>
               )}
             </div>
             <h2 className="font-semibold text-3xl">
@@ -108,15 +163,17 @@ export function ProductDetail() {
             </h2>
             <p>{product.description}</p>
             <hr />
-            <div className="flex items-center gap-2">
-              <p>Size:</p>
-              <Size label="XS" />
-              <Size label="S" />
-              <Size label="M" />
-              <Size label="L" />
-              <Size label="XL" />
-            </div>
-            <div className="flex gap-2">
+            {product.name === "The north coat" ? (
+              <div className="flex items-center gap-2">
+                <p>Size:</p>
+                <Size label="XS" />
+                <Size label="S" />
+                <Size label="M" />
+                <Size label="L" />
+                <Size label="XL" />
+              </div>
+            ) : ('')}
+            <div className="flex gap-6">
               <CustomNumberInput
                 value={number}
                 onChange={setNumber}
@@ -124,16 +181,18 @@ export function ProductDetail() {
                 max={product.quantityTotal}
                 step={1}
               />
-              <button className="border-none rounded p-3 text-white bg-red-custom w-6/12">
+              <button
+                onClick={handleBuyNow}
+                className={`border-none rounded p-3 text-white bg-red-custom w-6/12 ${product.quantityTotal === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+              >
                 Buy Now
               </button>
               <button
                 onClick={toggleFavorite}
-                className="rounded-full w-12 border-2 border-black flex items-center justify-center hover:bg-red-custom hover:text-white hover:border-white hover:transition-colors hover:duration-600"
+                className={` ${product.quantityTotal === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <FaRegHeart
-                  className={`h-5 w-5 ${product.favorite ? "text-red-custom" : "text-black"
-                    }`}
+                  className={`h-6 w-6 hover:text-red-custom  ${product.favorite ? "text-red-custom" : "text-black"}`}
                 />
               </button>
             </div>

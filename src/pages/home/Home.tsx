@@ -1,10 +1,10 @@
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
-import { TbTruckDelivery, TbHeadset, TbDeviceWatch } from "react-icons/tb";
+import { TbTruckDelivery, TbHeadset } from "react-icons/tb";
 import { RiShieldCheckLine } from "react-icons/ri";
-import { MdSmartphone, MdOutlineCameraAlt } from "react-icons/md";
+import { MdOutlineCameraAlt } from "react-icons/md";
 import { LuGamepad } from "react-icons/lu";
 import { IoMdArrowForward } from "react-icons/io";
-import { FaApple } from "react-icons/fa6";
+import { FaApple, FaRegUser } from "react-icons/fa6";
 import { AdMusic } from "../../components/service/ad_music/AdMusic";
 import { ProductList } from "../../components/service/show_products/showProducts";
 
@@ -18,6 +18,7 @@ import { Category } from "../../components/service/category/Category";
 import { Button } from "../../components/forms/button/Button";
 import { Carrosel } from "../../components/service/carrosel/Carrosel";
 import { Timer } from "../../components/service/timer/Timer";
+import { IoBagHandleOutline, IoHomeOutline } from "react-icons/io5";
 
 
 export function Home() {
@@ -128,8 +129,18 @@ export function Home() {
                 <div className="flex justify-evenly items-center w-full h-1/2 ">
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
                     gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
-                        <MdSmartphone className="text-5xl" />
-                        <h4 className="text-medium text-xl">Phones</h4>
+                        <IoHomeOutline className="text-5xl" />
+                        <h4 className="text-medium text-xl">Home</h4>
+                    </div>
+                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
+                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
+                        <FaRegUser className="text-5xl" />
+                        <h4 className="text-medium text-xl">Clothing</h4>
+                    </div>
+                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
+                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
+                        <IoBagHandleOutline className="text-5xl" />
+                        <h4 className="text-medium text-xl">Accessory</h4>
                     </div>
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
                     gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
@@ -138,18 +149,8 @@ export function Home() {
                     </div>
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
                     gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
-                        <TbDeviceWatch className="text-5xl" />
-                        <h4 className="text-medium text-xl">SmartWatch</h4>
-                    </div>
-                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
                         <MdOutlineCameraAlt className="text-5xl" />
                         <h4 className="text-medium text-xl">Camera</h4>
-                    </div>
-                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
-                        <TbHeadset className="text-5xl" />
-                        <h4 className="text-medium text-xl">HeadPhone</h4>
                     </div>
                     <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
                     gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
@@ -207,7 +208,7 @@ export function Home() {
                             <div className="flex flex-col gap-3 justify-end m-6 z-20">
                                 <h2 className="text-white font-semibold text-3xl">Women's Collections</h2>
                                 <p className="text-white font-light">
-                                    Feactured woman collections that <br />
+                                    Featured woman collections that <br />
                                     give you another vibe.
                                 </p>
                                 <p className="text-white font-semibold underline underline-offset-4 decoration-gray-line">Shop Now</p>

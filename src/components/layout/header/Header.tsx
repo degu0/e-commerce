@@ -1,7 +1,9 @@
 import { FaRegHeart } from "react-icons/fa";
 import { GrCart } from "react-icons/gr";
 
+
 export function Header() {
+
     return (
         <header className="flex flex-wrap items-center justify-around w-full h-1/6 pt-8 pb-4 border-b-2 border-gray-line font-custom">
             <div>
@@ -47,7 +49,7 @@ export function Header() {
                     </li>
                     <li>
                         <a href="/cart">
-                            <GrCart  className="h-6 w-6"/>
+                            <GrCart className="h-6 w-6" />
                         </a>
                     </li>
                 </ul>
@@ -55,3 +57,4 @@ export function Header() {
         </header>
     );
 }
+
