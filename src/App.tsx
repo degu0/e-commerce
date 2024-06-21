@@ -11,6 +11,8 @@ import { Login } from './pages/login/logIn/Login';
 import { SignUp } from './pages/login/signUp/SignUp';
 import { ProductDetail } from './pages/product/ProductDetail';
 import { CartShopping } from './pages/cart_shooping/Cart_Shopping';
+import { Category } from './pages/category/Category';
+import { Order } from './pages/order/Order';
 
 
 
@@ -26,6 +28,8 @@ export function App() {
           <Route path='/cart' element={<CartShopping />} />
           <Route path='/checkOut' element={<CheckOut />} />
           <Route path='/product/:id' element={<ProductDetail />} />
+          <Route path='/category/:category' element={<Category />} />
+          <Route path='/myOrder' element={<Order />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signUp' element={<SignUp />} />
         </Routes>

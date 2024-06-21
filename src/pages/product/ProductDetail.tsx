@@ -4,9 +4,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Size } from "../../components/forms/size/Size";
 import { LuTruck } from "react-icons/lu";
 import { GrReturn } from "react-icons/gr";
-import { Category } from "../../components/service/category/Category";
 import { Carrosel } from "../../components/service/carrosel/Carrosel";
 import { CustomNumberInput } from "../../components/forms/input/CustomNumberInput";
+import { TitleCategory } from "../../components/service/title_category/TitleCategory";
 
 interface Product {
   id: number;
@@ -24,26 +24,22 @@ export function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const [number, setNumber] = useState(0);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
       if (!id) return;
-      setLoading(true);
       try {
         const response = await fetch(`http://localhost:3000/products/${id}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch product with id ${id}`);
         }
         const data: Product = await response.json();
+        console.log(data);
+        
         setProduct(data);
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err) {
         console.error(err);
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -113,14 +109,6 @@ export function ProductDetail() {
       alert("Error creating purchase");
     }
   };
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>Error: {error}</p>;
-  }
 
   if (!product) {
     return <p>Product not found</p>;
@@ -220,7 +208,7 @@ export function ProductDetail() {
           </div>
         </div>
         <div className="h-[80vh]">
-          <Category name={"Today's"} />
+          <TitleCategory name={"Today's"} />
           <Carrosel />
         </div>
       </div>

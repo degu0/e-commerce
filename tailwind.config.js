@@ -11,7 +11,8 @@ export default {
         'gray-placeholder': '#A0A3BD',
         'gray-input': '#EFF0F6',
         'gray-line': '#D9DBE9',
-        'secondary': '#F5F5F5'
+        'secondary': '#F5F5F5',
+        'black-opacity': 'rgba(0, 0, 0, 0.6)',
       },
       fontFamily: {
         custom: ["Poppins", 'sans-serif'],

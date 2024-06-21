@@ -26,7 +26,7 @@
       "stock": true,
       "description": "Uma câmera DSLR da Canon conhecida por sua qualidade de imagem excepcional e versatilidade. Perfeita para fotógrafos profissionais e entusiastas, oferecendo recursos avançados para captura de fotos e vídeos de alta definição.",
       "image": "/src/image/Image_Products/Camera.png",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "3",
@@ -59,7 +59,7 @@
     {
       "id": "5",
       "name": "Small BookSelf",
-      "category": "Mobile",
+      "category": "Home",
       "price": 360,
       "percentage": 10,
       "oldPrice": 400,
@@ -130,11 +130,14 @@
   "purchases": [],
   "users": [
     {
-      "id": "1",
-      "name": "adm",
-      "email": "adm",
-      "password": "123",
-      "loggedIn": true
+      "id": 1,
+      "username": "user1",
+      "password": "password1"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "password2"
     }
   ]
 }

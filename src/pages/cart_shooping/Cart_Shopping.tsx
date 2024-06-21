@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { GrCart } from "react-icons/gr";
 import { TiDelete } from "react-icons/ti";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
     id: string;
@@ -14,6 +16,7 @@ export function CartShopping() {
     const [products, setProducts] = useState<Product[]>([]);
     const [totalPrice, setTotalPrice] = useState<number>(0);
     const [hoveredProductId, setHoveredProductId] = useState<string | null>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -57,8 +60,20 @@ export function CartShopping() {
         setTotalPrice(total);
     }, [products]);
 
+    const handleClickHome = () => {
+        navigate('/');
+    }
+
     if (products.length === 0) {
-        return <p>No products found</p>;
+        return (
+            <div className="h-screen">
+                <div className="h-full w-full flex flex-col justify-center items-center gap-10">
+                    <GrCart className="h-16 w-16 text-red-custom" />
+                    <h2 className="text-7xl">Your cart is empty</h2>
+                    <button className="border-none rounded text-white bg-red-custom w-22 h-22 px-20 py-5" onClick={handleClickHome}>Return to Home</button>
+                </div>
+            </div>
+        )
     }
 
     return (

@@ -1,12 +1,10 @@
-import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { TbTruckDelivery, TbHeadset } from "react-icons/tb";
 import { RiShieldCheckLine } from "react-icons/ri";
-import { MdOutlineCameraAlt } from "react-icons/md";
-import { LuGamepad } from "react-icons/lu";
 import { IoMdArrowForward } from "react-icons/io";
-import { FaApple, FaRegUser } from "react-icons/fa6";
+import { FaApple} from "react-icons/fa6";
 import { AdMusic } from "../../components/service/ad_music/AdMusic";
 import { ProductList } from "../../components/service/show_products/showProducts";
+import { CategoryProducts } from "../../components/service/category_products/CategoryProducts";
 
 import Iphone from "../../image/Iphone_frame_1.png";
 import PS5 from "../../image/Frame_3/PS5_frame_3.png";
@@ -14,11 +12,10 @@ import Woman from "../../image/Frame_3/Woman_frame_3.png";
 import Speakers from "../../image/Frame_3/Amazon_frame_3.png";
 import Perfume from "../../image/Frame_3/Perfume_frame_3.png";
 
-import { Category } from "../../components/service/category/Category";
+import { TitleCategory } from "../../components/service/title_category/TitleCategory";
 import { Button } from "../../components/forms/button/Button";
 import { Carrosel } from "../../components/service/carrosel/Carrosel";
 import { Timer } from "../../components/service/timer/Timer";
-import { IoBagHandleOutline, IoHomeOutline } from "react-icons/io5";
 
 
 export function Home() {
@@ -107,7 +104,7 @@ export function Home() {
                 </div>
             </div>
             <div className="flex flex-col items-center w-full h-[90vh] mt-[12%]">
-                <Category name={"Today's"} />
+                <TitleCategory name={"Today's"} />
                 <div className="flex items-end gap-x-24 w-full mb-8">
                     <h2 className="text-5xl font-semibold">Flash Sales</h2>
                     <Timer />
@@ -120,47 +117,23 @@ export function Home() {
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center w-full h-[90vh] my-[5%]">
-                <Category name="Categories" />
+                <TitleCategory name="Categories" />
                 <div className="flex justify-between gap-40 w-full">
                     <div>
                         <h2 className="text-5xl font-semibold">Browse By Categories</h2>
                     </div>
                 </div>
                 <div className="flex justify-evenly items-center w-full h-1/2 ">
-                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
-                        <IoHomeOutline className="text-5xl" />
-                        <h4 className="text-medium text-xl">Home</h4>
-                    </div>
-                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
-                        <FaRegUser className="text-5xl" />
-                        <h4 className="text-medium text-xl">Clothing</h4>
-                    </div>
-                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
-                        <IoBagHandleOutline className="text-5xl" />
-                        <h4 className="text-medium text-xl">Accessory</h4>
-                    </div>
-                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
-                        <HiOutlineComputerDesktop className="text-5xl" />
-                        <h4 className="text-medium text-xl">Computers</h4>
-                    </div>
-                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
-                        <MdOutlineCameraAlt className="text-5xl" />
-                        <h4 className="text-medium text-xl">Camera</h4>
-                    </div>
-                    <div className=" cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-                    gap-2 w-[15%] h-[60%] hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500">
-                        <LuGamepad className="text-5xl" />
-                        <h4 className="text-medium text-xl">Gaming</h4>
-                    </div>
+                    <CategoryProducts title="Home" />
+                    <CategoryProducts title="Clothing" />
+                    <CategoryProducts title="Accessory" />
+                    <CategoryProducts title="Computer" />
+                    <CategoryProducts title="Camera" />
+                    <CategoryProducts title="Gaming" />
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center w-full h-[90vh] my-[5%]">
-                <Category name="This Mouth" />
+                <TitleCategory name="This Mouth" />
                 <div className="flex justify-between items-end w-full mb-8">
                     <h2 className="text-5xl font-semibold">Best Selling Products</h2>
                     <Button label="View All" />
@@ -173,14 +146,14 @@ export function Home() {
                 <AdMusic />
             </div>
             <div className="flex flex-col justify-center items-center w-full my-[5%]">
-                <Category name="Our Products" />
+                <TitleCategory name="Our Products" />
                 <div className="flex justify-between w-full mb-8">
                     <h2 className="text-5xl font-semibold">Explore Our Products</h2>
                 </div>
                 <ProductList />
             </div>
             <div className="flex flex-col justify-center items-center w-full h-screen">
-                <Category name="Featured" />
+                <TitleCategory name="Featured" />
                 <div className="w-full">
                     <h2 className="text-5xl font-semibold text-start">New Arrival</h2>
                 </div>

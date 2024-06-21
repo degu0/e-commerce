@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GoTrash } from "react-icons/go";
+import { GoHeartFill, GoTrash } from "react-icons/go";
 import { GrCart } from "react-icons/gr";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -18,7 +18,6 @@ interface Product {
 export function Wishlist() {
     const { favorite } = useParams<{ favorite: string }>();
     const [products, setProducts] = useState<Product[]>([]);
-    const [error, setError] = useState<string | null>(null);
     const navigate = useNavigate();
 
 
@@ -32,12 +31,11 @@ export function Wishlist() {
 
                 const data: Product[] = await response.json();
                 const isFavorite = favorite !== "true";
-                console.log(favorite);
                 const filteredProducts = data.filter(product => product.favorite === isFavorite);
 
                 setProducts(filteredProducts);
             } catch (err) {
-                setError(err.message);
+                console.error(err);
             }
         };
 
@@ -102,12 +100,20 @@ export function Wishlist() {
         }
     };
 
-    if (error) {
-        return <p>Error: {error}</p>;
+    const handleClickHome = () => {
+        navigate('/');
     }
 
     if (products.length === 0) {
-        return <p>No products found</p>;
+        return (
+            <div className="h-screen">
+                <div className="h-full w-full flex flex-col justify-center items-center gap-10">
+                    <GoHeartFill className="h-16 w-16 text-red-custom" />
+                    <h2 className="text-7xl">Your wishlist is empty</h2>
+                    <button className="border-none rounded text-white bg-red-custom w-22 h-22 px-20 py-5" onClick={handleClickHome}>Return to Home</button>
+                </div>
+            </div>
+        )
     }
 
     const handleClick = (id: number) => {
