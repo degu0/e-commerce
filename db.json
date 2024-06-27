@@ -127,17 +127,23 @@
       "favorite": false
     }
   ],
-  "purchases": [],
+  "purchases": [
+    {
+      "id": "ce2d",
+      "productId": "3",
+      "productName": "ASUS FHD Gaming Laptop",
+      "productImage": "/src/image/Image_Products/Computer.png",
+      "quantity": 3,
+      "price": 700,
+      "date": "2024-06-27T18:17:15.405Z"
+    }
+  ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "user1",
+      "email": "user1@gmail.com",
       "password": "password1"
-    },
-    {
-      "id": 2,
-      "username": "user2",
-      "password": "password2"
     }
   ]
 }

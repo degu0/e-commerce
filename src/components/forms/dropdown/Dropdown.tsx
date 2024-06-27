@@ -19,11 +19,14 @@ const Dropdown: React.FC = () => {
     }
 
     return (
-        <div className="relative inline-block text-left h-full">
+        <div className="relative inline-block text-left h-full w-full">
             <div className='h-full flex items-end' >
                 <button
                     type="button"
-                    className="font-medium rounded-md focus:outline-none"
+                    className={`font-medium rounded-full  focus:outline-none w-full h-full flex items-center justify-center 
+                        ${isOpen ? 
+                            'bg-red-custom text-white' : 'bg-transparent'
+                        }`}
                     onClick={toggleDropdown}
                 >
                     <FiUser className="h-6 w-6" />
@@ -39,13 +42,13 @@ const Dropdown: React.FC = () => {
                         <button
                             className="flex items-center gap-2 px-4 py-3 text-base text-white w-full text-left"
                             onClick={handleClick}
-                            >
-                            <LuShoppingBag className='w-5'/> My Order
+                        >
+                            <LuShoppingBag className='w-5' /> My Order
                         </button>
                         <button
                             className="flex items-center gap-2 px-4 py-3 text-base text-white w-full text-left"
                             onClick={logout}>
-                            <TbLogout2 className='w-5'/> Logout
+                            <TbLogout2 className='w-5' /> Logout
                         </button>
                     </div>
                 </div>

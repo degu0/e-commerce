@@ -1,63 +1,47 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Visa_Icon from "../../image/Icons/Visa.svg";
 import MasterCard_Icon from "../../image/Icons/Mastercard.svg";
 
 interface Product {
-    id: number;
-    name: string;
+    id: string;
+    productId: string;
+    productName: string;
+    productImage: string;
     price: number;
-    quantityShopping: number;
-    stock: boolean;
-    description: string;
-    image: string;
-    favorite: boolean;
-    cart: boolean;
+    quantity: number;
 }
 
 export function CheckOut() {
     const { cart } = useParams<{ cart: string }>();
     const [products, setProducts] = useState<Product[]>([]);
     const [totalPrice, setTotalPrice] = useState<number>(0);
-    const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
-
+    const navigate = useNavigate();
 
 
     const fetchData = async () => {
-        setLoading(true);
         try {
-
-            const response = await fetch("http://localhost:3000/products");
+            const response = await fetch("http://localhost:3000/purchases");
             if (!response.ok) {
                 throw new Error("Failed to fetch data");
             }
 
             const data: Product[] = await response.json();
-
-            const isFavorite = cart === "false";
-            const filteredProducts = data.filter(product => product.cart !== isFavorite);
-
-            setProducts(filteredProducts);
+            setProducts(data);
         } catch (err) {
             setError((err as Error).message);
-        } finally {
-            setLoading(false);
         }
     };
 
     useEffect(() => {
-        const total = products.reduce((sum, product) => sum + (product.price * product.quantityShopping), 0);
+        const total = products.reduce((sum, product) => sum + (product.price * product.quantity), 0);
         setTotalPrice(total);
     }, [products]);
 
     useEffect(() => {
         fetchData();
     }, [cart]);
-
-    if (loading) {
-        return <p>Loading...</p>;
-    }
 
 
     if (error) {
@@ -67,6 +51,11 @@ export function CheckOut() {
 
     if (products.length === 0) {
         return <p>No products found</p>;
+    }
+
+    const handleClick = () => {
+        alert("Congratulations! You've purchased our products. Please come back again. 🎉  🎉");
+        navigate('/');
     }
 
     return (
@@ -82,27 +71,27 @@ export function CheckOut() {
                     <div className="flex flex-col gap-8 mt-10">
                         <div>
                             <label htmlFor="Name" className="text-gray-400">First Name<label className="text-red-400">*</label></label>
-                            <input type="text" id="Name" className="bg-gray-200 rounded border-none w-full p-3" />
+                            <input type="text" id="Name" className="bg-gray-200 rounded border-none w-full p-3 focus:outline-none focus:ring-0" />
                         </div>
                         <div>
                             <label htmlFor="Street" className="text-gray-400">Street Address<label className="text-red-400">*</label></label>
-                            <input type="text" id="Street" className="bg-gray-200 rounded border-none w-full p-3" />
+                            <input type="text" id="Street" className="bg-gray-200 rounded border-none w-full p-3 focus:outline-none focus:ring-0" />
                         </div>
                         <div>
                             <label htmlFor="Floor" className="text-gray-400">Apartment, Floor, etc. (optional)</label>
-                            <input type="text" id="Floor" className="bg-gray-200 rounded border-none w-full p-3" />
+                            <input type="text" id="Floor" className="bg-gray-200 rounded border-none w-full p-3 focus:outline-none focus:ring-0" />
                         </div>
                         <div>
                             <label htmlFor="Town" className="text-gray-400">Town/City<label className="text-red-400">*</label></label>
-                            <input type="text" id="Town" className="bg-gray-200 rounded border-none w-full p-3" />
+                            <input type="text" id="Town" className="bg-gray-200 rounded border-none w-full p-3 focus:outline-none focus:ring-0" />
                         </div>
                         <div>
                             <label htmlFor="Phone" className="text-gray-400">Phone Number<label className="text-red-400">*</label></label>
-                            <input type="text" id="Phone" className="bg-gray-200 rounded border-none w-full p-3" />
+                            <input type="text" id="Phone" className="bg-gray-200 rounded border-none w-full p-3 focus:outline-none focus:ring-0" />
                         </div>
                         <div>
                             <label htmlFor="Email" className="text-gray-400">Email Address<label className="text-red-400">*</label></label>
-                            <input type="email" id="Email" className="bg-gray-200 rounded border-none w-full p-3" />
+                            <input type="email" id="Email" className="bg-gray-200 rounded border-none w-full p-3 focus:outline-none focus:ring-0" />
                         </div>
                     </div>
                 </div>
@@ -112,10 +101,10 @@ export function CheckOut() {
                             {products.map(product => (
                                 <div key={product.id} className="flex justify-between items-center w-full my-5 font-semibold">
                                     <div className="flex items-center gap-2">
-                                        <img src={product.image} alt={product.name} className="h-12" />
-                                        <p>{product.name}</p>
+                                        <img src={product.productImage} alt={product.productName} className="h-12" />
+                                        <p>{product.productName}</p>
                                     </div>
-                                    <p>${product.price * product.quantityShopping}</p>
+                                    <p>${product.price * product.quantity}</p>
                                 </div>
                             ))}
                         </div>
@@ -169,7 +158,7 @@ export function CheckOut() {
                         <button className="bg-red-custom text-white rounded border-none w-2/5 p-3">Apply Coupon</button>
                     </div>
                     <div className="my-10">
-                        <button className="bg-red-custom text-white rounded border-none w-2/5 p-3">Place Order</button>
+                        <button className="bg-red-custom text-white rounded border-none w-2/5 p-3" onClick={handleClick}>Place Order</button>
                     </div>
                 </div>
             </div>

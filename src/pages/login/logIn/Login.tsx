@@ -1,4 +1,3 @@
-// src/components/Login.tsx
 import React, { useState } from 'react';
 import { useAuth } from '../../../components/service/auth_context/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -7,14 +6,13 @@ import Image from '../../../image/Image_login.png';
 export function Login() {
     const { login } = useAuth();
     const navigate = useNavigate();
-    const [username, setUsername] = useState('');
+    const [usernameOrEmail, setUsernameOrEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-        const success = await login(username, password);
-        console.log(login);
+        const success = await login(usernameOrEmail, password);
         if (success) {
             navigate('/');
         } else {
@@ -38,14 +36,14 @@ export function Login() {
                     <div className="flex flex-col items-center w-full gap-6">
                         <input
                             type="text"
-                            className="w-[60%] border-b-2 border-gray-200 p-2"
+                            className="w-[60%] border-b-2 border-gray-200 p-2 focus:outline-none focus:ring-0"
                             placeholder="Email or Phone Number"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            value={usernameOrEmail}
+                            onChange={(e) => setUsernameOrEmail(e.target.value)}
                         />
                         <input
                             type="password"
-                            className="w-[60%] border-b-2 border-gray-200 p-2"
+                            className="w-[60%] border-b-2 border-gray-200 p-2 focus:outline-none focus:ring-0"
                             placeholder="Password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}

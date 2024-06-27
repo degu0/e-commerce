@@ -19,7 +19,6 @@ import { Timer } from "../../components/service/timer/Timer";
 
 
 export function Home() {
-
     return (
         <div className="max-w-7xl m-auto font-custom">
             <div className="flex gap-16 h-[60vh] container">

@@ -4,6 +4,7 @@ import { GrCart } from "react-icons/gr";
 import { useAuth } from '../../service/auth_context/AuthContext';
 
 import Dropdown from "../../forms/dropdown/Dropdown";
+import { CiSearch } from "react-icons/ci";
 
 
 export function Header() {
@@ -48,21 +49,27 @@ export function Header() {
             </div>
             <div>
                 <ul className="flex list-none flex-row items-center gap-4">
-                    <li>
-                        <input type="text" className="p-2 px-8 border-none rounded-md bg-gray-200" placeholder="What are you looking for?" />
+                    <li className="flex justify-center items-center">
+                        <input type="text" className="p-2 px-8 border-none focus:outline-none focus:ring-0 
+                        rounded-l-md bg-gray-200" placeholder="What are you looking for?" />
+                        <div className="bg-gray-200 p-2 rounded-r-md ">
+                            <CiSearch className="w-6 h-6" />
+                        </div>
                     </li>
 
                     {user ? (
                         <>
-                            <li>
+                            <li className="w-8 h-8 flex justify-center items-center">
                                 <a href="/wishlist">
                                     <FaRegHeart className="h-6 w-6" />
                                 </a>
-                            </li><li>
+                            </li>
+                            <li className="w-8 h-8 flex justify-center items-center">
                                 <a href="/cart">
                                     <GrCart className="h-6 w-6" />
                                 </a>
-                            </li><li>
+                            </li>
+                            <li className="flex w-8 h-8">
                                 <Dropdown />
                             </li>
                         </>

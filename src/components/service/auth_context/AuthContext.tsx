@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext, ReactNode } from 'react';
 
 interface AuthContextType {
     user: string | null;
-    login: (username: string, password: string) => Promise<boolean>;
+    login: (usernameOrEmail: string, password: string) => Promise<boolean>;
     logout: () => void;
 }
 
@@ -13,17 +13,17 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         return localStorage.getItem('user');
     });
 
-    const login = async (username: string, password: string): Promise<boolean> => {
+    const login = async (usernameOrEmail: string, password: string): Promise<boolean> => {
         try {
             const response = await fetch('http://localhost:3000/users');
             const users = await response.json();
             const authenticatedUser = users.find(
-                (u: any) => u.username === username && u.password === password
+                (u: any) => (u.username === usernameOrEmail || u.email === usernameOrEmail) && u.password === password
             );
 
             if (authenticatedUser) {
-                setUser(username);
-                localStorage.setItem('user', username);
+                setUser(usernameOrEmail);
+                localStorage.setItem('user', usernameOrEmail);
                 return true;
             } else {
                 return false;

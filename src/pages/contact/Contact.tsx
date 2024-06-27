@@ -11,8 +11,8 @@ export function Contact() {
                     Home / <label className="text-black">Contact</label>
                 </p>
             </div>
-            <div className="flex justify-evenly items-center h-[80%] w-full">
-                <div className="w-[340px] h-[470px] border-none rounded shadow-lg">
+            <div className="flex flex-col sm:flex-row justify-evenly items-center h-4/5 w-full">
+                <div className="w-1/4 h-4/5 border-none rounded shadow-lg">
                     <div className="mx-8 my-8">
                         <div className="flex items-center gap-3">
                             <div className="bg-red-custom rounded-full w-10 h-10 flex justify-center items-center">
@@ -42,7 +42,7 @@ export function Contact() {
                         <p>Emails: support@ecommerce.com</p>
                     </div>
                 </div>
-                <div className="w-[60%] h-[470px] border-none rounded shadow-lg flex flex-col justify-center items-center">
+                <div className="w-3/5 h-4/5 border-none rounded shadow-lg flex flex-col justify-center items-center">
                     <div className="flex justify-around w-full ">
                         <Input name="Name" placeholder="Your Name" />
                         <Input name="Name" placeholder="Your Email" />

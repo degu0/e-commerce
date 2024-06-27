@@ -7,10 +7,12 @@ import { GrReturn } from "react-icons/gr";
 import { Carrosel } from "../../components/service/carrosel/Carrosel";
 import { CustomNumberInput } from "../../components/forms/input/CustomNumberInput";
 import { TitleCategory } from "../../components/service/title_category/TitleCategory";
+import { useAuth } from "../../components/service/auth_context/AuthContext";
 
 interface Product {
   id: number;
   name: string;
+  category: string;
   price: number;
   quantityTotal: number;
   review: number;
@@ -24,6 +26,7 @@ export function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const [number, setNumber] = useState(0);
+  const { user } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -35,7 +38,6 @@ export function ProductDetail() {
           throw new Error(`Failed to fetch product with id ${id}`);
         }
         const data: Product = await response.json();
-        console.log(data);
         
         setProduct(data);
       } catch (err) {
@@ -151,7 +153,7 @@ export function ProductDetail() {
             </h2>
             <p>{product.description}</p>
             <hr />
-            {product.name === "The north coat" ? (
+            {product.category === "Clothing" ? (
               <div className="flex items-center gap-2">
                 <p>Size:</p>
                 <Size label="XS" />
@@ -171,13 +173,13 @@ export function ProductDetail() {
               />
               <button
                 onClick={handleBuyNow}
-                className={`border-none rounded p-3 text-white bg-red-custom w-6/12 ${product.quantityTotal === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={`border-none rounded p-3 text-white bg-red-custom w-6/12  ${product.quantityTotal === 0 || !user ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 Buy Now
               </button>
               <button
                 onClick={toggleFavorite}
-                className={` ${product.quantityTotal === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={` ${product.quantityTotal === 0 || !user ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <FaRegHeart
                   className={`h-6 w-6 hover:text-red-custom  ${product.favorite ? "text-red-custom" : "text-black"}`}
