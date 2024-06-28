@@ -109,8 +109,8 @@ export function Wishlist() {
             <div className="h-screen">
                 <div className="h-full w-full flex flex-col justify-center items-center gap-10">
                     <GoHeartFill className="h-16 w-16 text-red-custom" />
-                    <h2 className="text-7xl">Your wishlist is empty</h2>
-                    <button className="border-none rounded text-white bg-red-custom w-22 h-22 px-20 py-5" onClick={handleClickHome}>Return to Home</button>
+                    <h2 className="text-3xl md:text-6xl">Your wishlist is empty</h2>
+                    <button className="border-none rounded text-white bg-red-custom px-10 xl:px-20 py-5" onClick={handleClickHome}>Return to Home</button>
                 </div>
             </div>
         )

@@ -49,14 +49,14 @@ export function SignUp() {
 
 
     return (
-        <div className="w-full h-screen flex font-custom">
-            <div className="w-[60%] bg-blue-login flex justify-center items-end">
+        <div className="w-full h-[110vh] sm:h-screen flex font-custom">
+            <div className="w-[60%] bg-blue-login justify-center items-end hidden sm:flex">
                 <img src={Image} className="h-full" alt="Login illustration" />
             </div>
-            <div className="w-[40%] flex flex-col justify-center items-center">
-                <form onSubmit={formik.handleSubmit} className="w-full max-w-md p-4">
+            <div className="sm:w-3/5 w-full flex flex-col justify-center items-center">
+                <form onSubmit={formik.handleSubmit} className="w-full max-w-lg p-4">
                     <div className="flex flex-col items-start mb-8">
-                        <h1 className="text-black font-bold text-4xl mb-2">Create an account</h1>
+                        <h1 className="text-black font-bold md:text-4xl text-3xl mb-2">Create an account</h1>
                         <h3 className="text-black text-xl">Enter your details below</h3>
                     </div>
                     <div className="flex flex-col items-center w-full gap-6">
