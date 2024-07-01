@@ -75,14 +75,18 @@ export function Carrosel() {
             </div>
             <button
                 onClick={prevSlide}
-                className={`absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-300 p-3 rounded-full shadow-lg focus:outline-none hover:bg-gray-200 focus:bg-gray-300 transition-all duration-300 ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={`absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-300 opacity-60 p-3 rounded 
+                    h-full lg:opacity-100 lg:rounded-full lg:h-10 shadow-lg focus:outline-none hover:bg-gray-200 
+                    focus:bg-gray-300 transition-all duration-300 ${currentIndex === 0 ? 'opacity-100 lg:opacity-50 cursor-not-allowed' : ''}`}
                 disabled={currentIndex === 0}
             >
                 <IoIosArrowBack />
             </button>
             <button
                 onClick={nextSlide}
-                className={`absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-300 p-3 rounded-full shadow-lg focus:outline-none hover:bg-gray-200 focus:bg-gray-300 transition-all duration-300 ${currentIndex >= Math.ceil(products.length / itemsPerPage) - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={`absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-300 opacity-60 p-3 rounded 
+                    h-full lg:opacity-100 lg:rounded-full lg:h-10 shadow-lg focus:outline-none hover:bg-gray-200 
+                    focus:bg-gray-300 transition-all duration-300 ${currentIndex >= Math.ceil(products.length / itemsPerPage) - 1 ? 'opacity-100 lg:opacity-50 cursor-not-allowed' : ''}`}
                 disabled={currentIndex >= Math.ceil(products.length / itemsPerPage) - 1}
             >
                 <IoIosArrowForward />

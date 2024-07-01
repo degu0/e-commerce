@@ -46,7 +46,7 @@ export function ProductList() {
     return (
         <div className="p-4 flex flex-col items-center">
             <div
-                className="w-full grid grid-cols-4 gap-4"
+                className="w-full grid grid-cols-1 justify-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
             >
                 {products.slice(0, visibleProducts).map((product: Product) => (
                     <div key={product.id} className="flex-shrink-0 p-2">
