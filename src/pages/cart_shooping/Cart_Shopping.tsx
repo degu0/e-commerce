@@ -120,17 +120,17 @@ export function CartShopping() {
                             </li>
                         </ul>
                     ))}
-                    <div className="flex items-center justify-between">
+                    <div className="flex flex-col md:flex-row gap-8 items-center justify-around xl:justify-between">
                         <button className="border-2 border-gray-400 rounded py-3 px-14 font-semibold">Return To Shop</button>
-                        <button className="border-2 border-gray-400 rounded py-3 px-14 font-semibold">Update Cart</button>
+                        <button className="border-2 border-gray-400 rounded py-3 px-16 font-semibold">Update Cart</button>
                     </div>
                 </div>
-                <div className="flex items-start justify-between h-screen">
-                    <div className="flex items-center gap-3 w-1/2">
-                        <input type="text" placeholder="Coupon Code" className="border-black border-2 rounded p-3 w-6/12" />
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between justify-center items-center gap-8 w-full h-screen">
+                    <div className="flex items-center gap-3 w-full md:w-4/5">
+                        <input type="text" placeholder="Coupon Code" className="border-black border-2 rounded p-3 w-1/2 ml-8 xl:m-0" />
                         <button className="border-none bg-red-custom text-white py-3 h-full rounded w-4/12">Apply Coupon</button>
                     </div>
-                    <div className="w-2/5 border-2 border-black font-semibold">
+                    <div className="w-4/5 md:w-3/5 border-2 border-black font-semibold">
                         <div className="flex flex-col gap-4 max-w-md m-auto my-8">
                             <p className="text-xl">Cart Total</p>
                             <div className="flex justify-between items-center">

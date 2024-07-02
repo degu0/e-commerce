@@ -43,7 +43,7 @@ export function Contact() {
                     </div>
                 </div>
                 <div className="w-3/4 h-4/5 md:w-6/12 py-7 border-none rounded shadow-lg flex flex-col justify-center items-center">
-                    <div className="flex flex-wrap gap-5 justify-center items-center lg:flex-col w-full text-md">
+                    <div className="flex flex-col xl:flex-row xl:w-4/5 gap-5 justify-center items-center lg:flex-col w-full text-md">
                         <Input name="Name" placeholder="Your Name" />
                         <Input name="Name" placeholder="Your Email" />
                         <Input name="Name" placeholder="Your Phone" />

@@ -21,7 +21,7 @@ import { Timer } from "../../components/service/timer/Timer";
 export function Home() {
     return (
         <div className="max-w-7xl m-auto font-custom">
-            <div className="flex gap-16 h-[60vh] container">
+            <div className="flex gap-16 xl:h-[60vh] mb-24 container">
                 <div className="w-[20%] border-gray-400 border-r-2 hidden lg:flex lg:flex-col lg:justify-start xl:justify-center lg:items-center 2xl:h-4/5">
                     <ul className="font-medium text-lg">
                         <li className="mb-3">
@@ -114,8 +114,7 @@ export function Home() {
                     </div>
                 </div>
             </div>
-
-            <div className="flex flex-col items-center w-full h-[90vh] mt-[12%]">
+            <div className="flex flex-col items-center w-full xl:h-[90vh] mb-24 xl:mb-0 mt-[12%]">
                 <TitleCategory name={"Today's"} />
                 <div
                     className="flex flex-col items-center gap-5 md:flex-row md:justify-between xl:justify-start xl:gap-20 w-full mb-8">
@@ -129,12 +128,11 @@ export function Home() {
                     <Button label="View All Products" />
                 </div>
             </div>
-
-            <div className="flex flex-col justify-center items-center gap-5 w-full h-[60vh] my-[5%]">
+            <div className="flex flex-col justify-center items-center gap-5 w-full xl:h-[60vh] mb-24 xl:mb-0 my-[5%]">
                 <TitleCategory name="Categories" />
                 <div className="flex justify-between gap-40 w-full">
                     <div>
-                        <h2 className="text-5xl font-semibold">Browse By Categories</h2>
+                        <h2 className="text-4xl text-center w-full font-semibold">Browse By Categories</h2>
                     </div>
                 </div>
                 <div
@@ -148,8 +146,7 @@ export function Home() {
                 </div>
 
             </div>
-
-            <div className="flex flex-col justify-center items-center w-full h-[90vh] my-[5%]">
+            <div className="flex flex-col justify-center items-center w-full xl:h-[90vh] mb-24 xl:mb-0 my-[5%]">
                 <TitleCategory name="This Mouth" />
                 <div className="flex flex-col items-center md:flex-row md:justify-between md:items-end gap-5 w-full mb-8">
                     <h2 className="text-4xl lg:text-5xl font-semibold">Best Selling Products</h2>
@@ -159,13 +156,9 @@ export function Home() {
                     <Carrosel />
                 </div>
             </div>
-
-
-            <div className="flex justify-center items-center w-full h-[90vh] my-[5%]">
+            <div className="flex justify-center items-center w-full xl:h-[90vh] my-[5%]">
                 <AdMusic />
             </div>
-
-
             <div className="flex flex-col justify-center items-center w-full my-[5%]">
                 <TitleCategory name="Our Products" />
                 <div className="flex justify-between w-full mb-8">
@@ -173,9 +166,7 @@ export function Home() {
                 </div>
                 <ProductList />
             </div>
-
-
-            <div className="flex flex-col justify-center items-center w-full h-[90vh]">
+            <div className="flex flex-col justify-center items-center w-full xl:h-[90vh] mb-24 xl:mb-0">
                 <TitleCategory name="Featured" />
                 <div className="w-full">
                     <h2 className="text-5xl font-semibold text-start">New Arrival</h2>
@@ -241,9 +232,7 @@ export function Home() {
                     </div>
                 </div>
             </div>
-
-
-            <div className="h-[90vh] flex flex-col lg:flex-row items-center justify-around">
+            <div className="xl:h-[90vh] mb-24 xl:mb-0 flex flex-col lg:flex-row items-center justify-around">
                 <div className="flex flex-col items-center justify-center">
                     <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center">
                         <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center">

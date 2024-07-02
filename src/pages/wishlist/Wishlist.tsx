@@ -122,7 +122,7 @@ export function Wishlist() {
 
     return (
         <div>
-            <div className="max-w-7xl m-auto h-[120vh] mt-20">
+            <div className="max-w-7xl m-auto pb-28 mt-20">
                 <div className="h-1/2 flex flex-col gap-y-16">
                     <div className="flex justify-between items-center font-semibold">
                         <p className="text-xl">Wishlist ({products.length})</p>
@@ -130,7 +130,7 @@ export function Wishlist() {
                             Move All To Bag
                         </button>
                     </div>
-                    <div className="w-full h-full grid grid-cols-4 gap-4">
+                    <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4">
                         {products.map(product => (
                             <div key={product.id} className="relative">
                                 <div className="bg-gray-200 border-none rounded-t flex flex-col items-center w-full h-52 relative">

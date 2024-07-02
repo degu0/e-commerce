@@ -12,7 +12,7 @@
       "stock": false,
       "description": "Uma bolsa de viagem luxuosa da Gucci, feita com materiais premium e design elegante, ideal para viagens curtas ou uso diário com estilo e praticidade.",
       "image": "/src/image/Image_Products/Bag.png",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "2",
@@ -26,7 +26,7 @@
       "stock": true,
       "description": "Uma câmera DSLR da Canon conhecida por sua qualidade de imagem excepcional e versatilidade. Perfeita para fotógrafos profissionais e entusiastas, oferecendo recursos avançados para captura de fotos e vídeos de alta definição.",
       "image": "/src/image/Image_Products/Camera.png",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "3",
@@ -40,7 +40,7 @@
       "stock": true,
       "description": "Um laptop gaming da ASUS com tela Full HD, potente o suficiente para executar jogos intensivos com fluidez. Equipado com componentes de alta performance e design que otimiza a experiência de jogo.",
       "image": "/src/image/Image_Products/Computer.png",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "4",
@@ -54,7 +54,7 @@
       "stock": true,
       "description": "Um gamepad USB GP11 Shooter projetado para jogadores que buscam precisão e conforto. Com botões responsivos e design ergonômico, é ideal para jogos de ação e aventura.",
       "image": "/src/image/Image_Products/Console.png",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "5",
