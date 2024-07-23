@@ -72,20 +72,20 @@ export function Order() {
                     Home / <label className="text-black">My Order</label>
                 </p>
             </div>
-            <div className="max-w-7xl m-auto flex items-center justify-between">
+            <div className="max-w-7xl m-auto flex flex-col lg:flex-row items-center justify-between">
                 <div className="flex flex-col gap-10">
                     <div>
                         <h2 className="text-lg font-bold">My Orders</h2>
-                        <p className="text-red-custom cursor-pointer ml-10">My Orders</p>
+                        <p className="text-red-custom cursor-pointer ml-10 flex-block hidden lg:block">My Orders</p>
                     </div>
                 </div>
-                <div className="w-4/5">
+                <div className="w-[90%] lg:w-4/5">
                     <ul className="shadow py-5 px-3">
                         <li className="flex justify-between">
-                            <p className="ml-10">Product</p>
+                            <p className="xl:ml-10">Product</p>
                             <p>Value</p>
                             <p>Quantity</p>
-                            <p className="mr-10">Estimated Delivery Date</p>
+                            <p className="xl:mr-12">Delivery Date</p>
                         </li>
                     </ul>
                     {products.map(product => (
@@ -93,14 +93,14 @@ export function Order() {
                             <li
                                 className="relative shadow flex justify-between items-center py-5"
                             >
-                                <div className="flex justify-center items-center ml-12 relative">
+                                <div className="flex justify-center items-center ml-5 xl:ml-12 relative">
                                     <img src={product.productImage} alt={product.productName} className="w-12 h-10" title={product.productName} />
                                 </div>
                                 <p>${product.price * product.quantity}</p>
                                 <div className="w-14 h-12 border-2 border-gray-300 rounded flex justify-center items-center">
                                     <p>{product.quantity}</p>
                                 </div>
-                                <p className="mr-12">There are {daysUntilDate(product.date)} days left.</p>
+                                <p className="mr-5 xl:mr-12">{daysUntilDate(product.date)} days.</p>
                             </li>
                         </ul>
                     ))}

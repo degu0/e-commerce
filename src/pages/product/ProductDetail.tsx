@@ -38,7 +38,7 @@ export function ProductDetail() {
           throw new Error(`Failed to fetch product with id ${id}`);
         }
         const data: Product = await response.json();
-        
+
         setProduct(data);
       } catch (err) {
         console.error(err);
@@ -124,13 +124,13 @@ export function ProductDetail() {
         </p>
       </div>
       <div className="h-full max-w-7xl m-auto">
-        <div className="flex justify-center items-center h-screen gap-10">
-          <div className="w-5/6 h-4/6 flex justify-center items-center">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
+          <div className="w-5/6 h-full flex justify-center items-center">
             <div className="bg-gray-100 border-none rounded w-3/4 h-full flex justify-center items-center">
-              <img src={product.image} alt={product.name} className="w-1/2" />
+              <img src={product.image} alt={product.name} className="xl:w-1/2" />
             </div>
           </div>
-          <div className="flex flex-col gap-6 w-3/6">
+          <div className="flex flex-col md:max-w-2xl lg:max-w-7xl md:m-auto gap-6">
             <h2 className="font-bold text-4xl">{product.name}</h2>
             <div className="flex items-center gap-5">
               <div className="flex items-center gap-2">
@@ -186,30 +186,30 @@ export function ProductDetail() {
                 />
               </button>
             </div>
-            <div className="border-2 rounded">
-              <div className="flex justify-start items-center p-3">
-                <LuTruck className="text-3xl mx-5" />
-                <div>
-                  <h4 className="font-semibold text-md">Free Delivery</h4>
-                  <p className="text-sm font-semibold underline">
-                    Enter you postal code for Delivery Availability
-                  </p>
-                </div>
-              </div>
-              <hr />
-              <div className="flex justify-start items-center p-3">
-                <GrReturn className="text-3xl mx-5" />
-                <div>
-                  <h4 className="font-semibold text-md">Return Delivery</h4>
-                  <p className="text-sm font-semibold">
-                    Free 30 Days Delivery Returns. Details
-                  </p>
-                </div>
-              </div>
+        <div className="border-2 rounded">
+          <div className="flex justify-start items-center p-3">
+            <LuTruck className="text-3xl mx-5" />
+            <div>
+              <h4 className="font-semibold text-md">Free Delivery</h4>
+              <p className="text-sm font-semibold underline">
+                Enter you postal code for Delivery Availability
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div className="flex justify-start items-center p-3">
+            <GrReturn className="text-3xl mx-5" />
+            <div>
+              <h4 className="font-semibold text-md">Return Delivery</h4>
+              <p className="text-sm font-semibold">
+                Free 30 Days Delivery Returns. Details
+              </p>
             </div>
           </div>
         </div>
-        <div className="h-[80vh]">
+          </div>
+        </div>
+        <div className="h-[80vh] mt-16">
           <TitleCategory name={"Today's"} />
           <Carrosel />
         </div>

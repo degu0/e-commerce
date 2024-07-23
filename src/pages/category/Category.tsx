@@ -49,7 +49,7 @@ export function Category() {
     };
 
     return (
-        <div className="h-screen ">
+        <div className="">
             <div className="h-[15vh] flex items-center ml-24">
                 <p className="text-gray-500 tracking-widest">
                     Home / <label className="text-black">{category}</label>
@@ -58,7 +58,7 @@ export function Category() {
             <div className="max-w-7xl m-auto">
                 <div className="p-4 flex flex-col items-center w-full">
                     <div
-                        className="w-full grid grid-cols-4 gap-4"
+                        className="w-4/5 md:w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
                     >
                         {products.slice(0, visibleProducts).map((product: Product) => (
                             <div key={product.id} className="flex-shrink-0 p-2">
