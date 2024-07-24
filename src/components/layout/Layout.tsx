@@ -1,6 +1,7 @@
 import { Header } from "./header/Header";
 import { Footer } from "./footer/Footer";
 import { useEffect, useState } from "react";
+import BottomMenu from "./bottomMenu/BottomMenu";
 
 export function Layout({ children }: any) {
     const [isLoading, setIsLoading] = useState(false);
@@ -29,6 +30,7 @@ export function Layout({ children }: any) {
                     children
                 )}
             </div>
+            <BottomMenu />
             <Footer />
         </div>
     );

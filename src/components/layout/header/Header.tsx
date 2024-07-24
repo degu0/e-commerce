@@ -14,9 +14,9 @@ export function Header() {
     return (
         <header className="flex flex-wrap items-center justify-around w-full h-1/6 pt-8 pb-4 border-b-2 border-gray-line font-custom">
             <div>
-                <a href="/" className="text-2xl font-bold">E-Commerce</a>
+                <a href="/" className="text-base md:text-xl lg:text-2xl font-bold">E-Commerce</a>
             </div>
-            <div>
+            <div className="hidden lg:block">
                 <ul className="flex list-none flex-row items-center gap-8 font-normal text-xl">
                     <li>
                         <a href="/" className="relative inline-block text-lg group">
@@ -48,17 +48,20 @@ export function Header() {
                 </ul>
             </div>
             <div>
-                <ul className="flex list-none flex-row items-center gap-4">
+                <ul className="flex list-none flex-row items-center gap-8">
                     <li className="flex justify-center items-center">
-                        <input type="text" className="p-2 px-8 border-none focus:outline-none focus:ring-0 
-                        rounded-l-md bg-gray-200" placeholder="What are you looking for?" />
-                        <div className="bg-gray-200 p-2 rounded-r-md ">
+                        <input
+                            type="text"
+                            className="flex-grow p-2 border-none focus:outline-none focus:ring-0 rounded-l-md bg-gray-200
+                            xl:px-8"
+                            placeholder="What are you looking for?"
+                        />
+                        <div className="bg-gray-200 p-2 rounded-r-md flex items-center justify-center">
                             <CiSearch className="w-6 h-6" />
                         </div>
                     </li>
-
                     {user ? (
-                        <>
+                        <ul className="hidden lg:flex lg:flex-row gap-6">
                             <li className="w-8 h-8 flex justify-center items-center">
                                 <a href="/wishlist">
                                     <FaRegHeart className="h-6 w-6" />
@@ -72,7 +75,7 @@ export function Header() {
                             <li className="flex w-8 h-8">
                                 <Dropdown />
                             </li>
-                        </>
+                        </ul>
                     ) : ("")}
                 </ul>
             </div>

@@ -173,7 +173,7 @@ export function Home() {
                 </div>
                 <div className="flex flex-col lg:flex-row gap-3 h-full w-full my-10">
                     <div className="relative flex gap-3 h-full w-full cursor-pointer">
-                        <div className="bg-black w-full h-full flex relative">
+                        <div className="bg-black w-full h-full lg:h-[72vh] xl:h-full flex relative">
                             <div className="absolute inset-0 flex justify-center items-end md:items-center lg:items-end z-10">
                                 <img src={PS5} className="w-6/12 md:w-[27%] lg:w-7/12 2xl:w-full object-cover" />
                             </div>
@@ -188,7 +188,7 @@ export function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="grid grid-rows-2 grid-flow-col gap-4 w-full cursor-pointer">
+                    <div className="grid grid-rows-3 sm:grid-rows-2 grid-flow-col gap-4 w-full cursor-pointer">
                         <div className="col-span-2 bg-black h-full w-full flex relative">
                             <div className="absolute inset-0 flex justify-end items-center z-10">
                                 <img src={Woman} className="h-full object-cover" />
@@ -203,7 +203,7 @@ export function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className="bg-black h-full w-full flex relative">
+                        <div className="col-span-2 sm:col-span-1 bg-black h-full w-full flex relative">
                             <div className="absolute inset-0 flex justify-center items-center z-10">
                                 <img src={Speakers} className="object-cover drop-shadow-2xl h-full 2xl:h-auto" />
                             </div>
@@ -216,7 +216,7 @@ export function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className=" bg-black h-full w-full flex relative">
+                        <div className="col-span-2 sm:col-span-1 bg-black h-full w-full flex relative">
                             <div className="absolute inset-0 flex justify-center items-center z-10">
                                 <img src={Perfume} className=" object-cover h-full 2xl:h-auto" />
                             </div>
