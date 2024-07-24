@@ -6,11 +6,11 @@ import { AdMusic } from "../../components/service/ad_music/AdMusic";
 import { ProductList } from "../../components/service/show_products/showProducts";
 import { CategoryProducts } from "../../components/service/category_products/CategoryProducts";
 
-import Iphone from "../../image/Iphone_frame_1.png";
-import PS5 from "../../image/Frame_3/PS5_frame_3.png";
-import Woman from "../../image/Frame_3/Woman_frame_3.png";
-import Speakers from "../../image/Frame_3/Amazon_frame_3.png";
-import Perfume from "../../image/Frame_3/Perfume_frame_3.png";
+import Iphone from "../../../public/image/Iphone_frame_1.png";
+import PS5 from "../../../public/image/Frame_3/PS5_frame_3.png";
+import Woman from "../../../public/image/Frame_3/Woman_frame_3.png";
+import Speakers from "../../../public/image/Frame_3/Amazon_frame_3.png";
+import Perfume from "../../../public/image/Frame_3/Perfume_frame_3.png";
 
 import { TitleCategory } from "../../components/service/title_category/TitleCategory";
 import { Button } from "../../components/forms/button/Button";

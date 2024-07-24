@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Box from "../../../image/JBL.png";
+import Box from "../../../../public/image/JBL.png";
 
 export function AdMusic () {
     const calculateTimeLeft = () => {

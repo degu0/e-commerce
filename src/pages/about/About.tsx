@@ -3,10 +3,10 @@ import { BiStoreAlt } from "react-icons/bi";
 import { TbCoin, TbMoneybag, TbHeadset, TbTruckDelivery } from "react-icons/tb";
 import { IoBagOutline } from "react-icons/io5";
 
-import Image from "../../image/About/about_1.png"
-import Tom from "../../image/About/image_1.png";
-import Emma from "../../image/About/image_2.png";
-import Will from "../../image/About/image_3.png";
+import Image from "../../../public/image/About/about_1.png"
+import Tom from "../../../public/image/About/image_1.png";
+import Emma from "../../../public/image/About/image_2.png";
+import Will from "../../../public/image/About/image_3.png";
 
 export function About() {
     return (

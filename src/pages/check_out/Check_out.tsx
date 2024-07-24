@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Visa_Icon from "../../image/Icons/Visa.svg";
-import MasterCard_Icon from "../../image/Icons/Mastercard.svg";
+import Visa_Icon from "../../../public/image/Icons/Visa.svg";
+import MasterCard_Icon from "../../../public/image/Icons/Mastercard.svg";
 
 interface Product {
     id: string;

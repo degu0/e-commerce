@@ -11,7 +11,7 @@
       "review": 65,
       "stock": false,
       "description": "Uma bolsa de viagem luxuosa da Gucci, feita com materiais premium e design elegante, ideal para viagens curtas ou uso diário com estilo e praticidade.",
-      "image": "/src/image/Image_Products/Bag.png",
+      "image": "/image/Image_Products/Bag.png",
       "favorite": true
     },
     {
@@ -25,7 +25,7 @@
       "review": 95,
       "stock": true,
       "description": "Uma câmera DSLR da Canon conhecida por sua qualidade de imagem excepcional e versatilidade. Perfeita para fotógrafos profissionais e entusiastas, oferecendo recursos avançados para captura de fotos e vídeos de alta definição.",
-      "image": "/src/image/Image_Products/Camera.png",
+      "image": "/image/Image_Products/Camera.png",
       "favorite": true
     },
     {
@@ -39,7 +39,7 @@
       "review": 325,
       "stock": true,
       "description": "Um laptop gaming da ASUS com tela Full HD, potente o suficiente para executar jogos intensivos com fluidez. Equipado com componentes de alta performance e design que otimiza a experiência de jogo.",
-      "image": "/src/image/Image_Products/Computer.png",
+      "image": "/image/Image_Products/Computer.png",
       "favorite": true
     },
     {
@@ -53,7 +53,7 @@
       "review": 55,
       "stock": true,
       "description": "Um gamepad USB GP11 Shooter projetado para jogadores que buscam precisão e conforto. Com botões responsivos e design ergonômico, é ideal para jogos de ação e aventura.",
-      "image": "/src/image/Image_Products/Console.png",
+      "image": "/image/Image_Products/Console.png",
       "favorite": true
     },
     {
@@ -67,7 +67,7 @@
       "review": 65,
       "stock": true,
       "description": "Uma estante compacta ideal para organizar livros e exibir objetos decorativos em espaços pequenos. Feita de materiais duráveis ​​e com design funcional que se adapta a diversos estilos de decoração.",
-      "image": "/src/image/Image_Products/drawer.png",
+      "image": "/images/drawer.png",
       "favorite": false
     },
     {
@@ -81,7 +81,7 @@
       "review": 65,
       "stock": true,
       "description": "Um casaco da The North Face projetado para enfrentar condições climáticas severas, oferecendo conforto e proteção contra o frio extremo. Ideal para aventuras ao ar livre e atividades em ambientes adversos.",
-      "image": "/src/image/Image_Products/Jacket_Pink.png",
+      "image": "/image/Image_Products/Jacket_Pink.png",
       "favorite": false
     },
     {
@@ -95,7 +95,7 @@
       "review": 65,
       "stock": true,
       "description": "Um monitor gaming com tecnologia IPS e tela LCD, proporcionando cores vibrantes e ângulos de visualização amplos. Oferece tempo de resposta rápido e suporte para uma experiência de jogo imersiva.",
-      "image": "/src/image/Image_Products/Monitor.png",
+      "image": "/image/Image_Products/Monitor.png",
       "favorite": false
     },
     {
@@ -109,7 +109,7 @@
       "review": 35,
       "stock": true,
       "description": "Chuteiras Jr. Zoom projetadas para jovens jogadores de futebol, oferecendo conforto, tração e suporte durante os jogos. Equipadas com tecnologias avançadas para melhor desempenho no campo.",
-      "image": "/src/image/Image_Products/Shoes.png",
+      "image": "/image/Image_Products/Shoes.png",
       "favorite": false
     },
     {
@@ -123,7 +123,7 @@
       "review": 65,
       "stock": true,
       "description": "Um cooler líquido com iluminação RGB para PCs, projetado para resfriar eficientemente o processador. Combina desempenho térmico superior com um visual estiloso, ideal para construções de PC gaming e de alto desempenho.",
-      "image": "/src/image/Image_Products/Cooler.png",
+      "image": "/image/Image_Products/Cooler.png",
       "favorite": false
     }
   ],
@@ -132,7 +132,7 @@
       "id": "ce2d",
       "productId": "3",
       "productName": "ASUS FHD Gaming Laptop",
-      "productImage": "/src/image/Image_Products/Computer.png",
+      "productImage": "/image/Image_Products/Computer.png",
       "quantity": 3,
       "price": 700,
       "date": "2024-06-27T18:17:15.405Z"

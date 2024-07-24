@@ -1,8 +1,8 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 
-import Image from '../../../image/Image_login.png';
-import Google from '../../../image/Google_Icon.svg';
+import Image from '../../../../public/image/Image_login.png';
+import Google from '../../../../public/image/Google_Icon.svg';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../components/service/auth_context/AuthContext';
 
