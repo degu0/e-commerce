@@ -35,7 +35,7 @@ export function Timer() {
             <div className="flex items-center gap-5 w-full font-semibold" key={interval}>
                 <div className="flex flex-col">
                     <p className="text-sm">{interval}</p>
-                    <h3 className="text-4xl">{timeLeft[interval]}</h3>
+                    <h3 className="text-3xl">{timeLeft[interval]}</h3>
                 </div>
                 {interval !== 'Seconds' ? (
                     <p className="text-red-400 text-3xl pt-5">:</p>

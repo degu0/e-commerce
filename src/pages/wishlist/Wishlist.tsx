@@ -122,11 +122,11 @@ export function Wishlist() {
 
     return (
         <div>
-            <div className="max-w-7xl m-auto pb-28 mt-20">
+            <div className="max-w-6xl m-auto pb-28 mt-20">
                 <div className="h-1/2 flex flex-col gap-y-16">
                     <div className="flex flex-col gap-10 sm:flex-row sm:justify-around sm:gap-0 xl:justify-between items-center font-semibold">
-                        <p className="text-xl">Wishlist ({products.length})</p>
-                        <button className="border-2 border-gray-500 rounded text-lg py-3 px-10">
+                        <p className="text-lg">Wishlist ({products.length})</p>
+                        <button className="border-2 border-gray-500 rounded py-2 px-8">
                             Move All To Bag
                         </button>
                     </div>

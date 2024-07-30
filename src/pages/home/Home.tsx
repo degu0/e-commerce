@@ -20,68 +20,68 @@ import { Timer } from "../../components/service/timer/Timer";
 
 export function Home() {
     return (
-        <div className="max-w-7xl m-auto font-custom">
+        <div className="max-w-6xl m-auto font-custom">
             <div className="flex gap-16 xl:h-[60vh] mb-24 container">
                 <div className="w-[20%] border-gray-400 border-r-2 hidden lg:flex lg:flex-col lg:justify-start xl:justify-center lg:items-center 2xl:h-4/5">
-                    <ul className="font-medium text-lg">
+                    <ul className="font-medium">
                         <li className="mb-3">
-                            <a href="/" className="relative inline-block text-lg group">
+                            <a href="/" className="relative inline-block group">
                                 Woman's Fashion
                                 <span
                                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
                             </a>
                         </li>
                         <li className="mb-3">
-                            <a href="/" className="relative inline-block text-lg group">
+                            <a href="/" className="relative inline-block group">
                                 Men's Fashion
                                 <span
                                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
                             </a>
                         </li>
                         <li className="mb-3">
-                            <a href="/" className="relative inline-block text-lg group">
+                            <a href="/" className="relative inline-block group">
                                 Electronics
                                 <span
                                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
                             </a>
                         </li>
                         <li className="mb-3">
-                            <a href="/" className="relative inline-block text-lg group">
+                            <a href="/" className="relative inline-block group">
                                 Home & Lifestyle
                                 <span
                                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
                             </a>
                         </li>
                         <li className="mb-3">
-                            <a href="/" className="relative inline-block text-lg group">
+                            <a href="/" className="relative inline-block group">
                                 Medicine
                                 <span
                                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
                             </a>
                         </li>
                         <li className="mb-3">
-                            <a href="/" className="relative inline-block text-lg group">
+                            <a href="/" className="relative inline-block group">
                                 Sports & Outdoor
                                 <span
                                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
                             </a>
                         </li>
                         <li className="mb-3">
-                            <a href="/" className="relative inline-block text-lg group">
+                            <a href="/" className="relative inline-block group">
                                 Baby's & Toys
                                 <span
                                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
                             </a>
                         </li>
                         <li className="mb-3">
-                            <a href="/" className="relative inline-block text-lg group">
+                            <a href="/" className="relative inline-block group">
                                 Groceries & Pets
                                 <span
                                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
                             </a>
                         </li>
                         <li className="mb-3">
-                            <a href="/" className="relative inline-block text-lg group">
+                            <a href="/" className="relative inline-block group">
                                 Health & Beauty
                                 <span
                                     className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-line group-hover:w-full transition-all duration-500"></span>
@@ -91,20 +91,20 @@ export function Home() {
                 </div>
                 <div
                     className="bg-black flex w-[85%] h-[60%] md:w-[75%] md:h-[70%] lg:w-[70%] lg:h-[80%] 2xl:h-[60%] m-auto my-10 cursor-pointer">
-                    <div className="h-full w-1/2 flex flex-col gap-2 md:gap-5 justify-center items-start ml-3 md:ml-10 lg:ml-16">
+                    <div className="h-full w-1/2 flex flex-col gap-2 md:gap-7 justify-center items-start ml-3 md:ml-10 lg:ml-16">
                         <div className="flex items-center gap-2">
-                            <FaApple className="text-white text-4xl md:text-5xl lg:text-6xl" />
+                            <FaApple className="text-white text-4xl md:text-5xl" />
                             <p className="text-white">Iphone 14 Series</p>
                         </div>
                         <div>
-                            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl">
+                            <h1 className="text-white text-3xl md:text-5xl">
                                 Up to 10% <br />
                                 off Voucher
                             </h1>
                         </div>
                         <div className="flex items-center gap-3">
                             <p
-                                className="text-white font-semibold text-xs lg:text-base underline underline-offset-4 decoration-gray-line">
+                                className="text-white font-semibold text-xs lg:text-sm underline underline-offset-4 decoration-gray-line">
                                 Shop Now</p>
                             <IoMdArrowForward className="text-white text-xl" />
                         </div>
@@ -118,7 +118,7 @@ export function Home() {
                 <TitleCategory name={"Today's"} />
                 <div
                     className="flex flex-col items-center gap-5 md:flex-row md:justify-between xl:justify-start xl:gap-20 w-full mb-8">
-                    <h2 className="text-5xl font-semibold">Flash Sales</h2>
+                    <h2 className="text-4xl font-semibold">Flash Sales</h2>
                     <Timer />
                 </div>
                 <div className="w-full">
@@ -149,7 +149,7 @@ export function Home() {
             <div className="flex flex-col justify-center items-center w-full xl:h-[90vh] mb-24 xl:mb-0 my-[5%]">
                 <TitleCategory name="This Mouth" />
                 <div className="flex flex-col items-center md:flex-row md:justify-between md:items-end gap-5 w-full mb-8">
-                    <h2 className="text-4xl lg:text-5xl font-semibold">Best Selling Products</h2>
+                    <h2 className="text-4xl lg:text-4xl font-semibold">Best Selling Products</h2>
                     <Button label="View All" />
                 </div>
                 <div className="w-full">
@@ -162,14 +162,14 @@ export function Home() {
             <div className="flex flex-col justify-center items-center w-full my-[5%]">
                 <TitleCategory name="Our Products" />
                 <div className="flex justify-between w-full mb-8">
-                    <h2 className="text-5xl font-semibold">Explore Our Products</h2>
+                    <h2 className="text-4xl font-semibold">Explore Our Products</h2>
                 </div>
                 <ProductList />
             </div>
             <div className="flex flex-col justify-center items-center w-full xl:h-[90vh] mb-24 xl:mb-0">
                 <TitleCategory name="Featured" />
                 <div className="w-full">
-                    <h2 className="text-5xl font-semibold text-start">New Arrival</h2>
+                    <h2 className="text-4xl font-semibold text-start">New Arrival</h2>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-3 h-full w-full my-10">
                     <div className="relative flex gap-3 h-full w-full cursor-pointer">
@@ -233,32 +233,32 @@ export function Home() {
                 </div>
             </div>
             <div className="xl:h-[90vh] mb-24 xl:mb-0 flex flex-col lg:flex-row items-center justify-around">
-                <div className="flex flex-col items-center justify-center">
-                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center">
-                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center">
-                            <TbTruckDelivery className="text-white text-4xl" />
+                <div className="flex flex-col items-center justify-center gap-2">
+                    <div className="bg-gray-400 rounded-full w-16 h-16 flex items-center justify-center">
+                        <div className="bg-black rounded-full w-14 h-14 flex items-center justify-center">
+                            <TbTruckDelivery className="text-white text-3xl" />
                         </div>
                     </div>
-                    <h1 className="font-bold text-2xl">FREE AND FAST DELIVERY</h1>
-                    <h3 className="text-lg font-medium">Free delivery for all orders over $140</h3>
+                    <h1 className="font-bold text-xl">FREE AND FAST DELIVERY</h1>
+                    <h3 className="font-medium">Free delivery for all orders over $140</h3>
                 </div>
-                <div className="flex flex-col items-center justify-center">
-                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center">
-                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center">
-                            <TbHeadset className="text-white text-4xl" />
+                <div className="flex flex-col items-center justify-center gap-2">
+                    <div className="bg-gray-400 rounded-full w-16 h-16 flex items-center justify-center">
+                        <div className="bg-black rounded-full w-14 h-14 flex items-center justify-center">
+                            <TbHeadset className="text-white text-3xl" />
                         </div>
                     </div>
-                    <h1 className="font-bold text-2xl">24/7 CUSTOMER SERVICE</h1>
-                    <h3 className="text-lg font-medium">Friendly 24/7 customer service</h3>
+                    <h1 className="font-bold text-xl">24/7 CUSTOMER SERVICE</h1>
+                    <h3 className="font-medium">Friendly 24/7 customer service</h3>
                 </div>
-                <div className="flex flex-col items-center justify-center">
-                    <div className="bg-gray-400 rounded-full w-20 h-20 flex items-center justify-center">
-                        <div className="bg-black rounded-full w-16 h-16 flex items-center justify-center">
-                            <RiShieldCheckLine className="text-white text-4xl" />
+                <div className="flex flex-col items-center justify-center gap-2">
+                    <div className="bg-gray-400 rounded-full w-16 h-16 flex items-center justify-center">
+                        <div className="bg-black rounded-full w-14 h-14 flex items-center justify-center">
+                            <RiShieldCheckLine className="text-white text-3xl" />
                         </div>
                     </div>
-                    <h1 className="font-bold text-2xl">MONEY BACK GUARANTEE</h1>
-                    <h3 className="text-lg font-medium">We return money within 30 days</h3>
+                    <h1 className="font-bold text-xl">MONEY BACK GUARANTEE</h1>
+                    <h3 className="font-medium">We return money within 30 days</h3>
                 </div>
             </div>
         </div>

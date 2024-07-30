@@ -30,11 +30,10 @@ export function CategoryProducts({ title }: CategoryProductsProps) {
     return (
         <div
             className="cursor-pointer border-2 border-gray-300 flex flex-col justify-center items-center 
-        gap-2 w-2/5 h-32 md:h-full md:w-7/12 lg:h-5/5 lg:w-full 2xl:h-3/5  hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500"
+        gap-2 w-2/5 h-32 md:h-full md:w-7/12 lg:h-full lg:w-full 2xl:h-3/5  hover:border-none hover:bg-red-custom hover:text-white hover:transition-colors hover:duration-500"
             onClick={handleClick}
         >
-            {/* Renderiza o ícone se ele existir no mapeamento */}
-            {IconComponent && <IconComponent className="text-3xl lg:text-5xl" />}
+            {IconComponent && <IconComponent className="text-3xl lg:text-4xl" />}
             <h4 className="text-medium text-base lg:text-xl">{title}</h4>
         </div>
     );

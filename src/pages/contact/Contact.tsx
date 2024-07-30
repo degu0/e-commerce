@@ -5,7 +5,7 @@ import { Input } from "../../components/forms/input/Input";
 
 export function Contact() {
     return (
-        <div className="h-[190vh] md:h-screen font-custom">
+        <div className="h-[190vh] md:h-[120vh] font-custom">
             <div className="h-[15vh] flex items-center ml-24">
                 <p className="text-gray-500 tracking-widest">
                     Home / <label className="text-black">Contact</label>
@@ -42,7 +42,7 @@ export function Contact() {
                         <p className="text-xs xl:text-base 2xl:text-lg">Emails: support@ecommerce.com</p>
                     </div>
                 </div>
-                <div className="w-3/4 h-4/5 md:w-6/12 py-7 border-none rounded shadow-lg flex flex-col justify-center items-center">
+                <div className="w-3/4 h-4/5 md:w-7/12 py-7 border-none rounded shadow-lg flex flex-col justify-center items-center">
                     <div className="flex flex-col xl:flex-row xl:w-4/5 gap-5 justify-center items-center lg:flex-col w-full text-md">
                         <Input name="Name" placeholder="Your Name" />
                         <Input name="Name" placeholder="Your Email" />

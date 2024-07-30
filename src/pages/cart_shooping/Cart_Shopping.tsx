@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { GrCart } from "react-icons/gr";
 import { TiDelete } from "react-icons/ti";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface Product {
     id: string;
@@ -78,12 +78,12 @@ export function CartShopping() {
 
     return (
         <div>
-            <div className="h-[15vh] flex items-center ml-44">
+            <div className="h-[15vh] flex items-center ml-24">
                 <p className="text-gray-500 tracking-widest">
                     Home / <label className="text-black">Cart</label>
                 </p>
             </div>
-            <div className="max-w-7xl m-auto flex flex-col gap-y-24">
+            <div className="max-w-6xl m-auto flex flex-col gap-y-24">
                 <div className="flex flex-col gap-y-10">
                     <ul className="shadow py-5 px-3">
                         <li className="flex justify-between">
@@ -121,8 +121,8 @@ export function CartShopping() {
                         </ul>
                     ))}
                     <div className="flex flex-col md:flex-row gap-8 items-center justify-around xl:justify-between">
-                        <button className="border-2 border-gray-400 rounded py-3 px-14 font-semibold">Return To Shop</button>
-                        <button className="border-2 border-gray-400 rounded py-3 px-16 font-semibold">Update Cart</button>
+                        <button className="border-2 border-gray-400 rounded py-2 px-12 font-semibold">Return To Shop</button>
+                        <button className="border-2 border-gray-400 rounded py-2 px-12 font-semibold">Update Cart</button>
                     </div>
                 </div>
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between justify-center items-center gap-8 w-full h-screen">
@@ -148,9 +148,9 @@ export function CartShopping() {
                                 <p>${totalPrice}</p>
                             </div>
                             <div className="">
-                                <a href="/checkout" className="w-full flex justify-center items-center">
-                                    <button className="border-none rounded bg-red-custom text-white w-1/2 p-3 ">Process to checkout</button>
-                                </a>
+                                <Link to="/checkout" className="w-full flex justify-center items-center">
+                                    <button className="border-none rounded bg-red-custom text-white w-1/2 p-2 ">Process to checkout</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

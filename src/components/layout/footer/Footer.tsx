@@ -4,9 +4,9 @@ export function Footer() {
             <div className="container mx-auto flex flex-wrap justify-around items-center gap-5 py-10">
                 <div className="flex gap-10 flex-col items-center sm:flex-row sm:w-full sm:justify-around md: lg:flex-row lg:w-max lg:gap-40">
                     <div>
-                        <ul>
+                        <ul className="text-sm">
                             <li className="py-4">
-                                <h3 className="text-2xl font-bold">Exclusive</h3>
+                                <h3 className="text-xl font-bold">Exclusive</h3>
                             </li>
                             <li className="pb-4">
                                 <p>Subscribe</p>
@@ -24,9 +24,9 @@ export function Footer() {
                         </ul>
                     </div>
                     <div className="max-w-[222px]">
-                        <ul>
+                        <ul className="text-sm">
                             <li className="pb-4">
-                                <h3 className="text-2xl font-bold">Support</h3>
+                                <h3 className="text-xl font-bold">Support</h3>
                             </li>
                             <li className="pb-4">
                                 <p>111 Bijoy Sarani, Dhaka, DH 1515, Bangladesh.</p>
@@ -42,9 +42,9 @@ export function Footer() {
                 </div>
                 <div className="flex gap-10 flex-col w-[222px] sm:flex-row sm:w-full sm:justify-around md: lg:flex-none lg:w-max lg:gap-40">
                     <div>
-                        <ul>
+                        <ul className="text-sm">
                             <li className="pb-4">
-                                <h3 className="text-2xl font-bold">Account</h3>
+                                <h3 className="text-xl font-bold">Account</h3>
                             </li>
                             <li className="pb-4">
                                 <p>My Account</p>
@@ -64,9 +64,9 @@ export function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <ul>
+                        <ul className="text-sm">
                             <li className="pb-4">
-                                <h3 className="text-2xl font-bold">Quick Link</h3>
+                                <h3 className="text-xl font-bold">Quick Link</h3>
                             </li>
                             <li className="pb-4">
                                 <p>Privacy Policy</p>

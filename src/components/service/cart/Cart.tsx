@@ -21,16 +21,16 @@ export function Cart({ id, name, price, oldPrice, percentage, review, image }: C
 
     return (
         <div onClick={handleClick} className="flex flex-col cursor-pointer">
-            <div className="bg-gray-200 w-full h-56 rounded">
-                <div className="bg-red-custom w-14 rounded px-2 py-1 text-white m-3">
+            <div className="bg-gray-200 w-full h-48 rounded">
+                <div className="bg-red-custom w-12 rounded px-2 py-1 text-white m-3 text-xs">
                     -{percentage}%
                 </div>
                 <div className="flex justify-center items-center">
-                    <img src={image} alt={name} className="w-32" />
+                    <img src={image} alt={name} className="w-28" />
                 </div>
             </div>
-            <div>
-                <h4 className="text-lg font-medium">{name}</h4>
+            <div className="text-sm">
+                <h4 className="font-medium">{name}</h4>
                 <div className="flex items-center gap-3 my-2">
                     <p className="text-red-custom ">${price.toFixed(2)}</p>
                     <p className="text-gray-300 line-through">${oldPrice.toFixed(2)}</p>

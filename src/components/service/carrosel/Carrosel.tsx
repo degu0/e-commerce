@@ -16,7 +16,7 @@ interface Product {
 export function Carrosel() {
     const [products, setProducts] = useState<Product[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerPage = 2; // Número de itens a serem exibidos por vez
+    const itemsPerPage = 2;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -50,7 +50,7 @@ export function Carrosel() {
     };
 
     return (
-        <div className="relative  overflow-hidden flex items-center">
+        <div className="relative overflow-hidden flex items-center max-w-6xl">
             <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{

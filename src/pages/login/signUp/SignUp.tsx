@@ -54,9 +54,9 @@ export function SignUp() {
                 <img src={Image} className="h-full" alt="Login illustration" />
             </div>
             <div className="sm:w-3/5 w-full flex flex-col justify-center items-center">
-                <form onSubmit={formik.handleSubmit} className="w-full max-w-lg p-4">
+                <form onSubmit={formik.handleSubmit} className="w-9/12 max-w-lg p-4">
                     <div className="flex flex-col items-start mb-8">
-                        <h1 className="text-black font-bold md:text-4xl text-3xl mb-2">Create an account</h1>
+                        <h1 className="text-black font-bold text-3xl mb-2">Create an account</h1>
                         <h3 className="text-black text-xl">Enter your details below</h3>
                     </div>
                     <div className="flex flex-col items-center w-full gap-6">
@@ -64,7 +64,7 @@ export function SignUp() {
                             type="text"
                             name="username"
                             placeholder="Username"
-                            className="w-full border-b-2 focus:outline-none focus:ring-0 border-gray-200 p-2"
+                            className="w-full border-b-2 focus:outline-none focus:ring-0 border-gray-200 p-2 lg:text-sm"
                             value={formik.values.username}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
@@ -77,7 +77,7 @@ export function SignUp() {
                             type="text"
                             name="email"
                             placeholder="Email"
-                            className="w-full border-b-2 focus:outline-none focus:ring-0 border-gray-200 p-2"
+                            className="w-full border-b-2 focus:outline-none focus:ring-0 border-gray-200 p-2 lg:text-sm"
                             value={formik.values.email}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
@@ -90,7 +90,7 @@ export function SignUp() {
                             type="password"
                             name="password"
                             placeholder="Password"
-                            className="w-full border-b-2 focus:outline-none focus:ring-0 border-gray-200 p-2"
+                            className="w-full border-b-2 focus:outline-none focus:ring-0 border-gray-200 p-2 lg:text-sm"
                             value={formik.values.password}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}

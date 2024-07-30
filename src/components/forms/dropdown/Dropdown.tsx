@@ -29,7 +29,7 @@ const Dropdown: React.FC = () => {
                         }`}
                     onClick={toggleDropdown}
                 >
-                    <FiUser className="h-6 w-6" />
+                    <FiUser className="h-5 w-5" />
                 </button>
             </div>
 
@@ -40,13 +40,13 @@ const Dropdown: React.FC = () => {
                 >
                     <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         <button
-                            className="flex items-center gap-2 px-4 py-3 text-base text-white w-full text-left"
+                            className="flex items-center gap-2 px-4 py-3 text-sm text-white w-full text-left"
                             onClick={handleClick}
                         >
                             <LuShoppingBag className='w-5' /> My Order
                         </button>
                         <button
-                            className="flex items-center gap-2 px-4 py-3 text-base text-white w-full text-left"
+                            className="flex items-center gap-2 px-4 py-3 text-sm text-white w-full text-left"
                             onClick={logout}>
                             <TbLogout2 className='w-5' /> Logout
                         </button>

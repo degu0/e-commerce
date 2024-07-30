@@ -16,16 +16,8 @@ const DropUp: React.FC = () => {
 
     const toggleDropdown = () => setIsOpen(!isOpen);
 
-    const handleClickOrder = () => {
-        navigate('/myOrder');
-    }
-
-    const handleClickWishlist = () => {
-        navigate('/wishlist')
-    }
-
-    const handleClickCart = () => {
-        navigate('/cart')
+    const handleClick = (link: string) => {
+        navigate(`/${link}`)
     }
 
     return (
@@ -51,19 +43,19 @@ const DropUp: React.FC = () => {
                     <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         <button
                             className="flex items-center gap-2 px-4 py-3 text-base text-white w-full text-left"
-                            onClick={handleClickOrder}
+                            onClick={() => handleClick("myOrder")}
                         >
                             <LuShoppingBag className='w-5' /> My Order
                         </button>
                         <button
                             className="flex items-center gap-2 px-4 py-3 text-base text-white w-full text-left"
-                            onClick={handleClickWishlist}
+                            onClick={() => handleClick("wishlist")}
                         >
                             <FaRegHeart className='w-5' /> Wishlist
                         </button>
                         <button
                             className="flex items-center gap-2 px-4 py-3 text-base text-white w-full text-left"
-                            onClick={handleClickCart}
+                            onClick={() => handleClick("cart")}
                         >
                             <GrCart className='w-5' /> Cart
                         </button>

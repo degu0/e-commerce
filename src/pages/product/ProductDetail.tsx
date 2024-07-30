@@ -123,15 +123,15 @@ export function ProductDetail() {
           Account / <label className="text-black">{product.name}</label>
         </p>
       </div>
-      <div className="h-full max-w-7xl m-auto">
+      <div className="h-full max-w-6xl m-auto">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
           <div className="w-5/6 h-full flex justify-center items-center">
             <div className="bg-gray-100 border-none rounded w-3/4 h-full flex justify-center items-center">
-              <img src={product.image} alt={product.name} className="xl:w-1/2" />
+              <img src={product.image} alt={product.name} className="xl:w-1/2 " />
             </div>
           </div>
-          <div className="flex flex-col md:max-w-2xl lg:max-w-7xl md:m-auto gap-6">
-            <h2 className="font-bold text-4xl">{product.name}</h2>
+          <div className="flex flex-col md:max-w-2xl xl:max-w-7xl md:m-auto gap-6">
+            <h2 className="font-bold text-3xl">{product.name}</h2>
             <div className="flex items-center gap-5">
               <div className="flex items-center gap-2">
                 <FaStar className="text-yellow-400" />
@@ -148,7 +148,7 @@ export function ProductDetail() {
                 <p className="text-red-custom">Out of Stock</p>
               )}
             </div>
-            <h2 className="font-semibold text-3xl">
+            <h2 className="font-semibold text-2xl">
               R$ {product.price.toFixed(2)}
             </h2>
             <p>{product.description}</p>
@@ -173,7 +173,7 @@ export function ProductDetail() {
               />
               <button
                 onClick={handleBuyNow}
-                className={`border-none rounded p-3 text-white bg-red-custom w-6/12  ${product.quantityTotal === 0 || !user ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={`border-none rounded text-white bg-red-custom w-5/12  ${product.quantityTotal === 0 || !user ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 Buy Now
               </button>
@@ -188,7 +188,7 @@ export function ProductDetail() {
             </div>
         <div className="border-2 rounded">
           <div className="flex justify-start items-center p-3">
-            <LuTruck className="text-3xl mx-5" />
+            <LuTruck className="text-2xl mx-5" />
             <div>
               <h4 className="font-semibold text-md">Free Delivery</h4>
               <p className="text-sm font-semibold underline">
@@ -198,9 +198,9 @@ export function ProductDetail() {
           </div>
           <hr />
           <div className="flex justify-start items-center p-3">
-            <GrReturn className="text-3xl mx-5" />
+            <GrReturn className="text-2xl mx-5" />
             <div>
-              <h4 className="font-semibold text-md">Return Delivery</h4>
+              <h4 className="font-semibold">Return Delivery</h4>
               <p className="text-sm font-semibold">
                 Free 30 Days Delivery Returns. Details
               </p>

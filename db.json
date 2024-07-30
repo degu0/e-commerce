@@ -136,6 +136,24 @@
       "quantity": 3,
       "price": 700,
       "date": "2024-06-27T18:17:15.405Z"
+    },
+    {
+      "id": "91d4",
+      "productId": "2",
+      "productName": "CANON EOS DSLR Camera",
+      "productImage": "/image/Image_Products/Camera.png",
+      "quantity": 4,
+      "price": 360,
+      "date": "2024-07-30T20:01:53.094Z"
+    },
+    {
+      "id": "a3e3",
+      "productId": "2",
+      "productName": "CANON EOS DSLR Camera",
+      "productImage": "/image/Image_Products/Camera.png",
+      "quantity": 4,
+      "price": 360,
+      "date": "2024-07-30T20:01:53.439Z"
     }
   ],
   "users": [
@@ -144,6 +162,12 @@
       "username": "user1",
       "email": "user1@gmail.com",
       "password": "password1"
+    },
+    {
+      "id": "ca19",
+      "username": "ola1",
+      "email": "ola1@gmail.com",
+      "password": "olaola"
     }
   ]
 }

@@ -72,7 +72,7 @@ export function Order() {
                     Home / <label className="text-black">My Order</label>
                 </p>
             </div>
-            <div className="max-w-7xl m-auto flex flex-col lg:flex-row items-center justify-between">
+            <div className="max-w-6xl m-auto flex flex-col lg:flex-row items-center justify-between">
                 <div className="flex flex-col gap-10">
                     <div>
                         <h2 className="text-lg font-bold">My Orders</h2>
