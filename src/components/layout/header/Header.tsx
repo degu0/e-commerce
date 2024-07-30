@@ -6,21 +6,12 @@ import { useAuth } from '../../service/auth_context/AuthContext';
 
 import Dropdown from "../../forms/dropdown/Dropdown";
 import { CiSearch } from "react-icons/ci";
-import { useNavigate } from "react-router-dom";
 
 
 export function Header() {
 
     const { user } = useAuth();
-    const navigate = useNavigate();
 
-    const handleClick = (link: string | null) => {
-        if (!link) {
-            navigate('/');
-        } else {
-            navigate(`/${link}`);
-        }
-    }
 
     return (
         <header className="flex flex-wrap items-center justify-around w-full h-1/6 pt-8 pb-4 border-b-2 border-gray-line font-custom">
