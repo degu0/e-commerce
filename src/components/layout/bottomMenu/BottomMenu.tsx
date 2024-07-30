@@ -11,17 +11,12 @@ const BottomMenu: React.FC = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
 
-    const handleClickHome = () => {
-        navigate('/');
-    }
-    const handleClickContect = () => {
-        navigate('/contact');
-    }
-    const handleClickAbout = () => {
-        navigate('/about');
-    }
-    const handleClickSignUp = () => {
-        navigate('/signUp');
+    const handleClick = (link: string | null) => {
+        if (!link) {
+            navigate('/');
+        } else {
+            navigate(`/${link}`);
+        }
     }
 
     return (
@@ -29,21 +24,21 @@ const BottomMenu: React.FC = () => {
             <ul className="flex justify-around items-center py-4">
                 <li>
                     <button className="flex flex-col items-center  transition-colors duration-300"
-                        onClick={handleClickHome}>
+                        onClick={() => handleClick(null)}>
                         <IoHomeOutline className="h-6 w-6 mb-1" />
                         <span className="text-sm">Home</span>
                     </button>
                 </li>
                 <li>
                     <button className="flex flex-col items-center transition-colors duration-300"
-                        onClick={handleClickContect}>
+                        onClick={() => handleClick("contact")}>
                         <FiPhone className="h-6 w-6 mb-1" />
                         <span className="text-sm">Contact</span>
                     </button>
                 </li>
                 <li>
                     <button className="flex flex-col items-center transition-colors duration-300"
-                        onClick={handleClickAbout}>
+                        onClick={() => handleClick("about")}>
                         <FaInfo className="h-6 w-6 mb-1" />
                         <span className="text-sm">About</span>
                     </button>
@@ -51,7 +46,7 @@ const BottomMenu: React.FC = () => {
                 {!user ? (
                     <li className="flex flex-col items-center justify-center">
                         <button className="flex flex-col items-center transition-colors duration-300"
-                            onClick={handleClickSignUp}>
+                            onClick={() => handleClick("signUp")}>
                             <FiUser className="h-6 w-6 mb-1" />
                             <span className="text-sm">SignUp</span>
                         </button>

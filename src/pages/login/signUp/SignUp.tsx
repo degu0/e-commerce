@@ -3,7 +3,7 @@ import * as yup from 'yup';
 
 import Image from '../../../../public/image/Image_login.png';
 import Google from '../../../../public/image/Google_Icon.svg';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../components/service/auth_context/AuthContext';
 
 const schema = yup.object().shape({
@@ -114,7 +114,7 @@ export function SignUp() {
                             Sign Up with Google
                         </button>
                         <p className="text-gray-500 mt-2">
-                            Already have an account? <a href="/login" className="text-gray-500 underline">Login</a>
+                            Already have an account? <Link to="/login" className="text-gray-500 underline">Login</Link>
                         </p>
                     </div>
                 </form>
