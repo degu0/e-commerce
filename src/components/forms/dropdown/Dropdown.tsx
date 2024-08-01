@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAuth } from '../../service/auth_context/AuthContext';
 
 import { FiUser } from "react-icons/fi";
@@ -7,7 +7,7 @@ import { LuShoppingBag } from 'react-icons/lu';
 import { TbLogout2 } from 'react-icons/tb';
 import { useNavigate } from 'react-router-dom';
 
-const Dropdown: React.FC = () => {
+export function Dropdown() {
     const { logout } = useAuth();
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
@@ -55,6 +55,4 @@ const Dropdown: React.FC = () => {
             )}
         </div>
     );
-};
-
-export default Dropdown;
+}

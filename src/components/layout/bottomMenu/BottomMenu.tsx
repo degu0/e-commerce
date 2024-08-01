@@ -3,10 +3,11 @@ import { IoHomeOutline } from "react-icons/io5";
 import { FiPhone, FiUser } from "react-icons/fi";
 
 import { useAuth } from '../../service/auth_context/AuthContext';
-import DropUp from '../../forms/dropUp/DropUp';
-import { useNavigate } from "react-router-dom";
 
-const BottomMenu: React.FC = () => {
+import { useNavigate } from "react-router-dom";
+import { DropUp } from "../../forms/dropUp/DropUp";
+
+export function BottomMenu() {
 
     const { user } = useAuth();
     const navigate = useNavigate();
@@ -61,6 +62,4 @@ const BottomMenu: React.FC = () => {
             </ul>
         </div>
     );
-};
-
-export default BottomMenu;
+}

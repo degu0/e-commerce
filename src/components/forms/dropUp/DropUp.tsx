@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAuth } from '../../service/auth_context/AuthContext';
 
 import { FiUser } from "react-icons/fi";
@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { GrCart } from 'react-icons/gr';
 import { FaRegHeart } from 'react-icons/fa';
 
-const DropUp: React.FC = () => {
+export function DropUp() {
     const { logout } = useAuth();
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
@@ -69,6 +69,4 @@ const DropUp: React.FC = () => {
             )}
         </div>
     );
-};
-
-export default DropUp;
+}

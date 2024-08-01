@@ -1,7 +1,8 @@
 import { Header } from "./header/Header";
 import { Footer } from "./footer/Footer";
 import { useEffect, useState } from "react";
-import BottomMenu from "./bottomMenu/BottomMenu";
+import { BottomMenu } from "./bottomMenu/BottomMenu";
+
 
 export function Layout({ children }: any) {
     const [isLoading, setIsLoading] = useState(false);

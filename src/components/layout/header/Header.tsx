@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 
 import { useAuth } from '../../service/auth_context/AuthContext';
 
-import Dropdown from "../../forms/dropdown/Dropdown";
+
 import { CiSearch } from "react-icons/ci";
+import { Dropdown } from "../../forms/dropdown/Dropdown";
 
 
 export function Header() {
